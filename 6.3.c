@@ -18,7 +18,7 @@ int main()
     struct sockaddr_in server;
     struct sockaddr_in client;
     int sin_size;
-    
+    pid_t pid;
     //create TCP socket
     if((listenfd = socket(AF_INET,SOCK_STREAM,0))== -1){
         perror("creating socket faild.");
@@ -45,7 +45,15 @@ int main()
             perror("accept() error\n");
             exit(1);
         }
+        pid = fork();
+        if(pid>0){
+        close(connectfd);
+        continue;
+         }else{
+         close(listenfd);
         process_cli(connectfd,client);
+        exit(0);
+      }
     }
     close(listenfd);
     

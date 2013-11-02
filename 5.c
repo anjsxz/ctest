@@ -6,19 +6,26 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <pthread.h>
 
 #define PORT 1234
 #define BACKLOG 5 //number of allowed connections
 #define MAXDATASIZE 1000
 
 void process_cli(int connectfd,struct sockaddr_in client);
+void* start_routine(void*arg);
+struct ARG{
+  int connfd;
+ struct sockaddr_in client;
+};
 int main()
 {
     int listenfd,connectfd;
     struct sockaddr_in server;
     struct sockaddr_in client;
     int sin_size;
-    
+    pthread_t thread;
+  struct  ARG *arg;
     //create TCP socket
     if((listenfd = socket(AF_INET,SOCK_STREAM,0))== -1){
         perror("creating socket faild.");
@@ -45,7 +52,13 @@ int main()
             perror("accept() error\n");
             exit(1);
         }
-        process_cli(connectfd,client);
+	arg = new (struct ARG);
+	arg->connfd = connectfd;
+	memcpy((void*)&arg->client,&client,sizeof(client));
+	if(pthread_create(&thread,NULL,start_routine,(void*)arg)){
+	    perror("Phread_create error\n");
+	    exit(1);
+	  }
     }
     close(listenfd);
     
@@ -66,4 +79,12 @@ void process_cli(int connectfd,struct sockaddr_in client)
         send(connectfd,sendbuf,strlen(sendbuf),0);
     }
     close(connectfd);
+}
+void* start_routine(void*arg)
+{
+ struct ARG *info;
+  info =(struct ARG*)arg;
+  process_cli(info->connfd,info->client);
+  delete arg;
+  pthread_close(NULL);
 }
