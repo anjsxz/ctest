@@ -1,3 +1,5 @@
+#include <iostream>
+#include <cstring>
 #include <stdio.h>
 #include <stdlib.h>
 #include <strings.h>
@@ -23,7 +25,7 @@ int main()
     int listenfd,connectfd;
     struct sockaddr_in server;
     struct sockaddr_in client;
-    int sin_size;
+    socklen_t sin_size;
     pthread_t thread;
   struct  ARG *arg;
     //create TCP socket
@@ -86,5 +88,5 @@ void* start_routine(void*arg)
   info =(struct ARG*)arg;
   process_cli(info->connfd,info->client);
   delete arg;
-  pthread_close(NULL);
+  pthread_exit(NULL);
 }

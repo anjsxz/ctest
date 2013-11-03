@@ -1,3 +1,5 @@
+#include <iostream>
+#include<cstring>
 #include <strings.h>
 #include <stdio.h>
 #include <stdlib.h>
