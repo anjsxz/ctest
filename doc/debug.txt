@@ -1,0 +1,12 @@
+valgrind
+mtrace
+electric fence
+
+#ifdef DEBUG
+#define DEBUGMSG(fmt,...) printf("%s %d"fmt,__FILE__,__LINE__,##_VA_ARGS_) /* C99*/
+#else
+#define DEBUGMSG /* nop */
+#endif
+
+#define EXITMSG(msg) \
+do(printf(msg); exit(EXIT_FAILURE);}while(0)
