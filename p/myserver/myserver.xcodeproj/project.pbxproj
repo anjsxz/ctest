@@ -16,6 +16,8 @@
 		5F740EC7182C3F53006F2A5D /* CNetLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EBF182C3F53006F2A5D /* CNetLayer.mm */; };
 		5F740EC8182C3F53006F2A5D /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EC0182C3F53006F2A5D /* json.cpp */; };
 		5FCD2FE6182BC316001BA6D4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD2FE5182BC316001BA6D4 /* main.cpp */; };
+		636745CB18337024004D0327 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 636745CA18337024004D0327 /* libz.1.2.5.dylib */; };
+		636745CE1833715A004D0327 /* ZipUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636745CD1833715A004D0327 /* ZipUtils.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +99,9 @@
 		5F740EC2182C3F53006F2A5D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
 		5FCD2FE2182BC316001BA6D4 /* myserver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = myserver; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCD2FE5182BC316001BA6D4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		636745CA18337024004D0327 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		636745CC1833715A004D0327 /* ZipUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipUtils.h; sourceTree = "<group>"; };
+		636745CD1833715A004D0327 /* ZipUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipUtils.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636745CB18337024004D0327 /* libz.1.2.5.dylib in Frameworks */,
 				5F740EAF182C3B30006F2A5D /* libmysqlclient.18.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +212,8 @@
 		5F740EA2182C3B30006F2A5D /* network */ = {
 			isa = PBXGroup;
 			children = (
+				636745CC1833715A004D0327 /* ZipUtils.h */,
+				636745CD1833715A004D0327 /* ZipUtils.cpp */,
 				5F740EB7182C3F53006F2A5D /* CDatConnect.cpp */,
 				5F740EB8182C3F53006F2A5D /* CDatConnect.h */,
 				5F740EB9182C3F53006F2A5D /* CDatPacket.cpp */,
@@ -225,6 +233,7 @@
 		5FCD2FD9182BC314001BA6D4 = {
 			isa = PBXGroup;
 			children = (
+				636745CA18337024004D0327 /* libz.1.2.5.dylib */,
 				5FCD2FE4182BC316001BA6D4 /* myserver */,
 				5FCD2FE3182BC316001BA6D4 /* Products */,
 			);
@@ -304,6 +313,7 @@
 				5F740EC8182C3F53006F2A5D /* json.cpp in Sources */,
 				5F740EAE182C3B30006F2A5D /* client_plugin.h.pp in Sources */,
 				5F740EC7182C3F53006F2A5D /* CNetLayer.mm in Sources */,
+				636745CE1833715A004D0327 /* ZipUtils.cpp in Sources */,
 				5F740EC4182C3F53006F2A5D /* CDatPacket.cpp in Sources */,
 				5F740EC6182C3F53006F2A5D /* CNetLayer.cpp in Sources */,
 			);
@@ -386,6 +396,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/anjun/git/anjsxz/ctest/p/myserver/myserver/lib/db,
+					"/Users/devil/anjun/lib/cpp/mysql-connector-c-6.1.2-osx10.7-x86/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -397,6 +408,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/anjun/git/anjsxz/ctest/p/myserver/myserver/lib/db,
+					"/Users/devil/anjun/lib/cpp/mysql-connector-c-6.1.2-osx10.7-x86/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

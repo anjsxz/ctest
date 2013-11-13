@@ -8,9 +8,9 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <pthread.h>
-
+#include "ZipUtils.h"
 #include "CDatPacket.h"
-#define PORT 1234   /* Port that will be opened */
+#define PORT 6001   /* Port that will be opened */
 #define BACKLOG 5   /* Number of allowed connections */
 #define MAXDATASIZE 1000
 
@@ -32,26 +32,37 @@ int	UnMarshal(char *pData,int len, bool zip)
     //////
     char *pBuffer;
     
-    pBuffer = new char[m_head.uLen + 1];
-    memset(pBuffer, 0, m_head.uLen + 1);
-    memcpy(pBuffer, pBuf, m_head.uLen);
+    if(m_head.cZip)
+    {
+        char *pbuf2;
+        pbuf2 = (char*)malloc(m_head.uLen );
+        memset(pbuf2, 0, m_head.uLen);
+        memcpy(pbuf2, pBuf, m_head.uLen);
+        
+        for(int i=0;i<m_head.uLen;i++)
+            pbuf2[i]-=(BYTE)i;
+        
+        int length = ZipUtils::ccInflateMemory((unsigned char*)pbuf2, m_head.uLen, (unsigned char**) &pBuffer);
+        
+        free(pbuf2);
+        
+        if(length < 0)
+        {
+            return 0;
+        }
+    }
+    else
+    {
+        pBuffer = new char[m_head.uLen + 1];
+        memset(pBuffer, 0, m_head.uLen + 1);
+        memcpy(pBuffer, pBuf, m_head.uLen);
+        
+    }
     
     
     printf("recv:%s",pBuffer);
     
-    //////////////
-    //    if(zip)
-    //    {
-    //        ;////////unzip
-    //    }
-    //    else
-    //    {
-    //        pBuffer = (char*)malloc(len + 1);
-    //        memset(pBuffer, 0, len + 1);
-    //        memcpy(pBuffer, pBuf, len);
-    //        CCLog("%s",pBuffer);
-    //    }
-    ////////////////
+
     json::Json *pJson = NULL;
     json::Json jComm;
     json::JsonValue jv;
@@ -74,7 +85,9 @@ int	UnMarshal(char *pData,int len, bool zip)
         
         const   char* code =   (char*)(*pJson)["code"];
         if (strcmp(code, "01") ==0) {
-            printf("1");
+            printf("register");
+        }else if (strcmp(code, "02") ==0) {
+            printf("login");
         }
         
     } catch (json::JsonException *e) {
@@ -224,7 +237,7 @@ void process_cli(int connectfd, sockaddr_in client)
 	int num;
 	char recvbuf[MAXDATASIZE], sendbuf[MAXDATASIZE], cli_name[MAXDATASIZE];
     
-	printf("You got a connection from %s.  ",inet_ntoa(client.sin_addr) );
+//	printf("You got a connection from %s.  ",inet_ntoa(client.sin_addr) );
 	/* Get client's name from client */
 	num = recv(connectfd, cli_name, MAXDATASIZE,0);
 	if (num == 0) {
@@ -233,7 +246,7 @@ void process_cli(int connectfd, sockaddr_in client)
         return;
     }
 	cli_name[num - 1] = '\0';
-	printf("Client's name is %s.\n",cli_name);
+//	printf("Client's name is %s.\n",cli_name);
     
 	while (num = recv(connectfd, recvbuf, MAXDATASIZE,0)) {
         recvbuf[num] = '\0';
