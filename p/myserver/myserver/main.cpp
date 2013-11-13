@@ -14,6 +14,17 @@
 #define BACKLOG 5   /* Number of allowed connections */
 #define MAXDATASIZE 1000
 
+void marshal(const char* code);
+
+CommRequest m_commfield;
+char *pSend;
+CMemBuffer *pMyBuf;
+CMemBuffer *m_pData;
+char *pRecv;
+int len;
+int m_reclen;
+bool m_bzip;
+
 void process_cli(int connectfd, sockaddr_in client);
 /* function to be executed by the new thread */
 void* start_routine(void* arg);
@@ -21,6 +32,35 @@ struct  ARG  {
     int connfd;
     sockaddr_in client;
 };
+void doRegist(){
+/*
+ {
+ "commresponse": {
+ "appver": "1.0",
+ "code": "01",
+ "msg": "Success",
+ "retcode": 1,
+ "systime": 1384335562
+ },
+ "lang": "en",
+ "otherid": "0",
+ "othername": "Player-9145",
+ "sex": 1,
+ "userid": 9145,
+ "username": "Player-9145"
+ }*/
+   
+}
+void doLogin(){
+}
+void doUpdateUserInfo(){
+}
+void doGetAction(){
+}
+void doGiveAction(){
+}
+void doInstalledGame(){
+}
 int	UnMarshal(char *pData,int len, bool zip)
 {
     DAT_HEAD	m_head;
@@ -85,9 +125,20 @@ int	UnMarshal(char *pData,int len, bool zip)
         
         const   char* code =   (char*)(*pJson)["code"];
         if (strcmp(code, "01") ==0) {
-            printf("register");
+//            doRegist();
+            marshal("01");
         }else if (strcmp(code, "02") ==0) {
-            printf("login");
+            doLogin();
+        }else if (strcmp(code, "06") ==0){
+            doUpdateUserInfo();
+        }else if (strcmp(code, "11") ==0){
+            doGetAction();
+        }else if (strcmp(code, "17") ==0){
+//            Access is already installed little account of the game   17
+            doInstalledGame();
+        }else if (strcmp(code, "21") ==0){
+//            向好友索取或者赠送行动时通知服务器形成一个message（21
+            doGiveAction();
         }
         
     } catch (json::JsonException *e) {
@@ -110,8 +161,69 @@ int	UnMarshal(char *pData,int len, bool zip)
 }
 
 
-void Marshal(){
+void marshal(const char* code){
+    json::Json jsonSend;
+    json::Json jsonCommon;
+    json::JsonArray jsonList;
+
+  
     
+    jsonCommon["appver"] = "1.0";
+    jsonCommon["code"] = "01";
+    jsonCommon["msg"] = "Success";
+    jsonCommon["retcode"] = 1;
+    jsonCommon["systime"] = (int)time(NULL);
+    
+    json::JsonValue jv = jsonCommon;
+    jsonSend["commrequest"] = jv;
+    
+    
+    
+    jsonSend["lang"] = "en";
+    jsonSend["otherid"] = "0";
+    jsonSend["othername"] = "Player-9145";
+    jsonSend["sex"] = 1;
+    jsonSend["userid"] = 9145;
+    jsonSend["username"] = "Player_9145";
+
+    std::string strJson;
+    jsonSend.Dump(strJson);
+    
+    printf("%s",strJson.c_str());
+    
+    DAT_HEAD m_head;
+    m_head.key = HEAD_KEY;
+    m_head.uLen = strlen(strJson.c_str()) ;
+    m_head.cZip = 1;
+    
+    
+    
+    char *pBuf = m_pData->GetBuffer(sizeof(m_head) + m_head.uLen);
+    memcpy(pBuf, &m_head, sizeof(m_head));
+    
+    pBuf += sizeof(m_head);
+    memcpy(pBuf, strJson.c_str(), m_head.uLen);
+    
+    char *out = NULL;
+    char *in = m_pData->GetData()+sizeof(DAT_HEAD);
+    len = ZipUtils::ccDeflateMemory((unsigned char*)in, m_pData->GetLength()-sizeof(DAT_HEAD),(unsigned char**) &out);
+    
+    if(len<=0)
+        return ;
+    
+    for(int i=0;i<len;i++)
+    {
+        out[i]+=(BYTE)i;
+    }
+    
+    len+=sizeof(DAT_HEAD);
+    pSend = (char*)malloc(len);
+    memcpy(pSend, m_pData->GetData(), sizeof(DAT_HEAD));
+    memcpy( pSend+sizeof(DAT_HEAD), out, len-sizeof(DAT_HEAD));
+    
+    DAT_HEAD *pHead = (DAT_HEAD*)pSend;
+    pHead->uLen = len-sizeof(DAT_HEAD);
+
 }
 int main()
 {
@@ -229,34 +341,35 @@ void process_cli(int connectfd, sockaddr_in client)
         return ;
     }
     //    UnMarshal
-    UnMarshal(pRecv,byte_num,0);
+    UnMarshal(pRecv,byte_num,1);
     
-    //    Marshal
-    Marshal();
+    
     //    send
-	int num;
-	char recvbuf[MAXDATASIZE], sendbuf[MAXDATASIZE], cli_name[MAXDATASIZE];
-    
-//	printf("You got a connection from %s.  ",inet_ntoa(client.sin_addr) );
-	/* Get client's name from client */
-	num = recv(connectfd, cli_name, MAXDATASIZE,0);
-	if (num == 0) {
+     flag = setsockopt(connectfd, SOL_SOCKET, SO_SNDTIMEO, (char*)&tv,sizeof(tv) );
+    if(flag != 0)
+    {
+        perror("error");
         close(connectfd);
-        printf("Client disconnected.\n");
-        return;
+        return ;
     }
-	cli_name[num - 1] = '\0';
-//	printf("Client's name is %s.\n",cli_name);
     
-	while (num = recv(connectfd, recvbuf, MAXDATASIZE,0)) {
-        recvbuf[num] = '\0';
-        printf("Received client( %s ) message: %s",cli_name, recvbuf);
-        for (int i = 0; i < num - 1; i++) {
-            sendbuf[i] = recvbuf[num - i -2];
+    int sent = 0;
+    int st = 0;
+    
+    while(sent<len)
+    {
+        st =send(connectfd, pSend+sent, len, 0);
+        if(st <0)
+        {
+            perror("send error");
+            close(connectfd);
+            return ;
         }
-        sendbuf[num - 1] = '\0';
-        send(connectfd,sendbuf,strlen(sendbuf),0);
+        
+        sent+=st;
     }
+    
+
 	close(connectfd); /*  close connectfd */
 }
 
