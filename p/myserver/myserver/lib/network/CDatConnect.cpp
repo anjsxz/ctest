@@ -1,3 +1,4 @@
+/*
 #include "CDatConnect.h"
 //#include <error.h>
 #include <errno.h>
@@ -478,3 +479,4 @@ bool CDatConnect::Connect()
     return true;
     
 }
+*/

@@ -188,7 +188,7 @@ public:
     virtual int Marshal() = 0;
 
     DAT_HEAD m_head;
-//    CommRequest m_commField;
+    CommResponse m_commField;
 //    std::string m_strcode;
     CMemBuffer *m_pData;
 };
@@ -206,7 +206,7 @@ public:
     int ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out);
     
     DAT_HEAD				m_head;
-    CommResponse m_commField;
+    CommRequest m_commField;
     
 
 };

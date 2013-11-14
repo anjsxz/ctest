@@ -4,10 +4,10 @@
 #include "stdafx.h"
 
 
-
+/*
 //#define LINK_MYURL  "map.mylocmon.com"
 //#define LINK_MYURL  "10.25.2.12"
-#define LINK_MYURL "192.168.1.254"
+#define LINK_MYURL "127.0.0.1"
 //#define LINK_MYURL "121.199.28.225"
 //#define LINK_MYURL "192.168.1.14"
 //#define LINK_MYURL "12sx.boyojoy.com"
@@ -46,4 +46,4 @@ private:
     int m_reclen;
     bool m_bzip;
 };
-
+*/

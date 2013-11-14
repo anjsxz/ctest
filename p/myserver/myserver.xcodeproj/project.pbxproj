@@ -12,9 +12,12 @@
 		5F740EC3182C3F53006F2A5D /* CDatConnect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EB7182C3F53006F2A5D /* CDatConnect.cpp */; };
 		5F740EC4182C3F53006F2A5D /* CDatPacket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EB9182C3F53006F2A5D /* CDatPacket.cpp */; };
 		5F740EC5182C3F53006F2A5D /* CMemBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EBB182C3F53006F2A5D /* CMemBuffer.cpp */; };
-		5F740EC6182C3F53006F2A5D /* CNetLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EBD182C3F53006F2A5D /* CNetLayer.cpp */; };
-		5F740EC7182C3F53006F2A5D /* CNetLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EBF182C3F53006F2A5D /* CNetLayer.mm */; };
 		5F740EC8182C3F53006F2A5D /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EC0182C3F53006F2A5D /* json.cpp */; };
+		5F7AF61F183519BA00B4A6ED /* MyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF61D183519BA00B4A6ED /* MyServer.cpp */; };
+		5F7AF62218351B0100B4A6ED /* TcpServThr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62018351B0100B4A6ED /* TcpServThr.cpp */; };
+		5F7AF62518351B3E00B4A6ED /* mysocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62318351B3E00B4A6ED /* mysocket.cpp */; };
+		5F7AF62818351BCE00B4A6ED /* Mythread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62618351BCE00B4A6ED /* Mythread.cpp */; };
+		5F7AF62B18351C1B00B4A6ED /* MySync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62918351C1B00B4A6ED /* MySync.cpp */; };
 		5FCD2FE6182BC316001BA6D4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD2FE5182BC316001BA6D4 /* main.cpp */; };
 		636745CB18337024004D0327 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 636745CA18337024004D0327 /* libz.1.2.5.dylib */; };
 		636745CE1833715A004D0327 /* ZipUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636745CD1833715A004D0327 /* ZipUtils.cpp */; };
@@ -91,12 +94,19 @@
 		5F740EBA182C3F53006F2A5D /* CDatPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDatPacket.h; sourceTree = "<group>"; };
 		5F740EBB182C3F53006F2A5D /* CMemBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CMemBuffer.cpp; sourceTree = "<group>"; };
 		5F740EBC182C3F53006F2A5D /* CMemBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMemBuffer.h; sourceTree = "<group>"; };
-		5F740EBD182C3F53006F2A5D /* CNetLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CNetLayer.cpp; sourceTree = "<group>"; };
-		5F740EBE182C3F53006F2A5D /* CNetLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNetLayer.h; sourceTree = "<group>"; };
-		5F740EBF182C3F53006F2A5D /* CNetLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CNetLayer.mm; sourceTree = "<group>"; };
 		5F740EC0182C3F53006F2A5D /* json.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json.cpp; sourceTree = "<group>"; };
 		5F740EC1182C3F53006F2A5D /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
 		5F740EC2182C3F53006F2A5D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
+		5F7AF61D183519BA00B4A6ED /* MyServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyServer.cpp; sourceTree = "<group>"; };
+		5F7AF61E183519BA00B4A6ED /* MyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyServer.h; sourceTree = "<group>"; };
+		5F7AF62018351B0100B4A6ED /* TcpServThr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TcpServThr.cpp; sourceTree = "<group>"; };
+		5F7AF62118351B0100B4A6ED /* TcpServThr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TcpServThr.h; sourceTree = "<group>"; };
+		5F7AF62318351B3E00B4A6ED /* mysocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mysocket.cpp; sourceTree = "<group>"; };
+		5F7AF62418351B3E00B4A6ED /* mysocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mysocket.h; sourceTree = "<group>"; };
+		5F7AF62618351BCE00B4A6ED /* Mythread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mythread.cpp; sourceTree = "<group>"; };
+		5F7AF62718351BCE00B4A6ED /* mythread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mythread.h; sourceTree = "<group>"; };
+		5F7AF62918351C1B00B4A6ED /* MySync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MySync.cpp; sourceTree = "<group>"; };
+		5F7AF62A18351C1B00B4A6ED /* MySync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySync.h; sourceTree = "<group>"; };
 		5FCD2FE2182BC316001BA6D4 /* myserver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = myserver; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCD2FE5182BC316001BA6D4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		636745CA18337024004D0327 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
@@ -212,6 +222,14 @@
 		5F740EA2182C3B30006F2A5D /* network */ = {
 			isa = PBXGroup;
 			children = (
+				5F7AF62918351C1B00B4A6ED /* MySync.cpp */,
+				5F7AF62A18351C1B00B4A6ED /* MySync.h */,
+				5F7AF62318351B3E00B4A6ED /* mysocket.cpp */,
+				5F7AF62418351B3E00B4A6ED /* mysocket.h */,
+				5F7AF62618351BCE00B4A6ED /* Mythread.cpp */,
+				5F7AF62718351BCE00B4A6ED /* mythread.h */,
+				5F7AF62018351B0100B4A6ED /* TcpServThr.cpp */,
+				5F7AF62118351B0100B4A6ED /* TcpServThr.h */,
 				636745CC1833715A004D0327 /* ZipUtils.h */,
 				636745CD1833715A004D0327 /* ZipUtils.cpp */,
 				5F740EB7182C3F53006F2A5D /* CDatConnect.cpp */,
@@ -220,9 +238,6 @@
 				5F740EBA182C3F53006F2A5D /* CDatPacket.h */,
 				5F740EBB182C3F53006F2A5D /* CMemBuffer.cpp */,
 				5F740EBC182C3F53006F2A5D /* CMemBuffer.h */,
-				5F740EBD182C3F53006F2A5D /* CNetLayer.cpp */,
-				5F740EBE182C3F53006F2A5D /* CNetLayer.h */,
-				5F740EBF182C3F53006F2A5D /* CNetLayer.mm */,
 				5F740EC0182C3F53006F2A5D /* json.cpp */,
 				5F740EC1182C3F53006F2A5D /* json.h */,
 				5F740EC2182C3F53006F2A5D /* stdafx.h */,
@@ -252,6 +267,8 @@
 			children = (
 				5F740E69182C3B30006F2A5D /* lib */,
 				5FCD2FE5182BC316001BA6D4 /* main.cpp */,
+				5F7AF61D183519BA00B4A6ED /* MyServer.cpp */,
+				5F7AF61E183519BA00B4A6ED /* MyServer.h */,
 			);
 			path = myserver;
 			sourceTree = "<group>";
@@ -309,13 +326,16 @@
 			files = (
 				5FCD2FE6182BC316001BA6D4 /* main.cpp in Sources */,
 				5F740EC5182C3F53006F2A5D /* CMemBuffer.cpp in Sources */,
+				5F7AF61F183519BA00B4A6ED /* MyServer.cpp in Sources */,
 				5F740EC3182C3F53006F2A5D /* CDatConnect.cpp in Sources */,
+				5F7AF62218351B0100B4A6ED /* TcpServThr.cpp in Sources */,
+				5F7AF62818351BCE00B4A6ED /* Mythread.cpp in Sources */,
 				5F740EC8182C3F53006F2A5D /* json.cpp in Sources */,
+				5F7AF62518351B3E00B4A6ED /* mysocket.cpp in Sources */,
 				5F740EAE182C3B30006F2A5D /* client_plugin.h.pp in Sources */,
-				5F740EC7182C3F53006F2A5D /* CNetLayer.mm in Sources */,
 				636745CE1833715A004D0327 /* ZipUtils.cpp in Sources */,
+				5F7AF62B18351C1B00B4A6ED /* MySync.cpp in Sources */,
 				5F740EC4182C3F53006F2A5D /* CDatPacket.cpp in Sources */,
-				5F740EC6182C3F53006F2A5D /* CNetLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

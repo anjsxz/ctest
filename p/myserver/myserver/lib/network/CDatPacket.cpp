@@ -8,6 +8,7 @@
 #include "stdafx.h"
 #include  "CDatPacket.h"
 #include <zlib.h>
+#include "ZipUtils.h"
 #if CC_TEXTURE_ATLAS_USE_VAO
 #include "iconv.h"
 #else
@@ -28,7 +29,7 @@ CDatResponse::~CDatResponse(void)
 
 CDatRequest::CDatRequest(void)
 {
-    m_commField.retcode = 4;
+//    m_commField.retcode = 4;
 }
 
 int CDatRequest::ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out)
@@ -108,7 +109,7 @@ int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
         for(int i=0;i<m_head.uLen;i++)
             pbuf2[i]-=(BYTE)i;
         
-        int length ;//= ZipUtils::ccInflateMemory((unsigned char*)pbuf2, m_head.uLen, (unsigned char**) &pBuffer);
+        int length = ZipUtils::ccInflateMemory((unsigned char*)pbuf2, m_head.uLen, (unsigned char**) &pBuffer);
         
         free(pbuf2);
         
@@ -128,18 +129,7 @@ int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
     
     printf("%s",pBuffer);
     
-    //////////////
-    //    if(zip)
-    //    {
-    //        ;////////unzip
-    //    }
-    //    else
-    //    {
-    //        pBuffer = (char*)malloc(len + 1);
-    //        memset(pBuffer, 0, len + 1);
-    //        memcpy(pBuffer, pBuf, len);
-    //        printf("%s",pBuffer);
-    //    }
+
     ////////////////
     json::Json *pJson = NULL;
     json::Json jComm;
@@ -156,18 +146,31 @@ int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
     
     
     try {
-        jv = (*pJson)["commresponse"];
+        jv = (*pJson)["commrequest"];
         jComm = jv;
-        m_commField.msg =(char*) jComm["msg"];
-        m_commField.retcode = (int)jComm["retcode"];
-        m_commField.systime = (int )jComm["systime"];
-        m_commField.code = (char*)jComm["code"];
-        g_sysTimer = m_commField.systime;
-        timeStart=0;
-        if(m_commField.retcode == 1)
-        {
-            UnMarshal(*pJson);
-        }
+        m_commField.appver =(char*) jComm["appver"];
+        m_commField.snnum = (char*)jComm["snnum"];
+        m_commField.verions = (char*)jComm["version"];
+        m_commField.sysver = (char*)jComm["sysver"];
+        
+        const   char* code =   (char*)(*pJson)["code"];
+        
+//       if (strcmp(code, "01") ==0) {
+//       
+//            UnMarshal(*pJson);
+//       }else if (strcmp(code, "02") ==0) {
+//           doLogin();
+//       }else if (strcmp(code, "06") ==0){
+//           doUpdateUserInfo();
+//       }else if (strcmp(code, "11") ==0){
+//           doGetAction();
+//       }else if (strcmp(code, "17") ==0){
+//           //            Access is already installed little account of the game   17
+//           doInstalledGame();
+//       }else if (strcmp(code, "21") ==0){
+//           //            向好友索取或者赠送行动时通知服务器形成一个message（21
+//           doGiveAction();
+//       }
         
         
         
@@ -190,10 +193,10 @@ int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
     
 }
 
-int CDatRequest::getRetcode()
-{
-    return m_commField.retcode;
-}
+//int CDatRequest::getRetcode()
+//{
+////    return m_commField.retcode;
+//}
 
 CDatRequest::~CDatRequest(void)
 {
@@ -260,14 +263,14 @@ int CDatRegistRequest::UnMarshal(json::Json &jc)
 //}
 
 #pragma mark Login
-
+/*
 
 CDatLoginResponse::CDatLoginRequest(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int userid)
 {
-    m_reqLogin=reqLogin;
-    m_source=source;
-    m_list=list;
-    m_userId=userid;
+//    m_reqLogin=reqLogin;
+//    m_source=source;
+//    m_list=list;
+//    m_userId=userid;
 }
 int CDatLoginResponse::Marshal()
 {
@@ -278,11 +281,11 @@ int CDatLoginResponse::Marshal()
     
     
     jsonSend["code"] = "02";
-    
-    jsonCommon["snnum"] = m_commField.snnum.c_str();
-    jsonCommon["sysver"] = m_commField.sysver.c_str();
-    jsonCommon["appver"] = m_commField.appver.c_str();
-    jsonCommon["version"] = m_commField.verions.c_str();
+//    
+//    jsonCommon["snnum"] = m_commField.snnum.c_str();
+//    jsonCommon["sysver"] = m_commField.sysver.c_str();
+//    jsonCommon["appver"] = m_commField.appver.c_str();
+//    jsonCommon["version"] = m_commField.verions.c_str();
     
     json::JsonValue jv = jsonCommon;
     jsonSend["commrequest"] = jv;
@@ -550,6 +553,7 @@ int CDatLoginResponse::UnMarshal(json::Json &jc)
     }
     return 1;
 }
+
 #pragma mark   UpdateUserInfo    06
 CDatUpdateUserInfoRequest::CDatUpdateUserInfoRequest(getUserInfo info,std::vector<int> list,int time,int isstart,int type)
 {
@@ -934,3 +938,4 @@ char Hex(const char pos)
     }
     return (char)(h);
 }
+*/
