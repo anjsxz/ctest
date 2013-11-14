@@ -61,7 +61,7 @@ void doGiveAction(){
 }
 void doInstalledGame(){
 }
-int	UnMarshal(char *pData,int len, bool zip)
+int	UnMarshal(int connectfd, sockaddr_in client,char *pData,int len, bool zip)
 {
     DAT_HEAD	m_head;
     char *pBuf = pData;
@@ -125,6 +125,8 @@ int	UnMarshal(char *pData,int len, bool zip)
         
         const   char* code =   (char*)(*pJson)["code"];
         if (strcmp(code, "01") ==0) {
+            CDatRegistResponse *res =new CDatRegistResponse();
+            
 //            doRegist();
             marshal("01");
         }else if (strcmp(code, "02") ==0) {
@@ -341,7 +343,7 @@ void process_cli(int connectfd, sockaddr_in client)
         return ;
     }
     //    UnMarshal
-    UnMarshal(pRecv,byte_num,1);
+    UnMarshal( connectfd,  client,pRecv,byte_num,1);
     
     
     //    send
@@ -381,7 +383,7 @@ void* start_routine(void* arg)
 	/* handle client¡¯s requirement */
 	process_cli(info->connfd, info->client);
     
-	delete arg;
+	delete info;
 	pthread_exit(NULL);
 }
 

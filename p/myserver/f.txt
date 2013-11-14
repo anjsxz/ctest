@@ -1,3 +1,2043 @@
 regist:{"commresponse" : {"appver" : "1.0","code" : "01","msg" : "Success","retcode" : 1,"systime" : 1384335562},"lang" : "en","otherid" : "0","othername" : "Player-9145","sex" : 1,"userid" : 9145,"username" : "Player-9145"}
 
 login :{"code" : "02","commrequest" : {"appver" : "2.0","snnum" : "1111111","sysver" : "1.1","version" : "1.1"},"email" : "","lang" : "en","list" : [],"otherid" : "0","othername" : "Player-1063","sex" : 1,"source" : "2","userid" : 1063,"username" : "Player-1063"}
+
+{
+    "Age": 0,
+    "Email": "",
+    "OtherId": "",
+    "OtherName": "Player-9146",
+    "UserName": "Player-9146",
+    "action": 5,
+    "awardlist": [{
+        "num": 1,
+        "sliver": 1
+    }, {
+        "num": 2,
+        "sliver": 2
+    }, {
+        "num": 3,
+        "sliver": 3
+    }, {
+        "num": 4,
+        "sliver": 4
+    }, {
+        "num": 5,
+        "sliver": 5
+    }, {
+        "num": 6,
+        "sliver": 6
+    }, {
+        "num": 7,
+        "sliver": 7
+    }, {
+        "num": 8,
+        "sliver": 8
+    }, {
+        "num": 9,
+        "sliver": 9
+    }, {
+        "num": 10,
+        "sliver": 10
+    }],
+    "bronzenum": 0,
+    "commresponse": {
+        "appver": "2.0",
+        "code": "02",
+        "msg": "Success",
+        "retcode": 1,
+        "systime": 1384402858
+    },
+    "curex": 0,
+    "datetime": 1384761420,
+    "day": 1,
+    "diamond": 0,
+    "friendlist": [{
+        "bronzenum": 0,
+        "friendid": 9146,
+        "friendname": "Player-9146",
+        "friendscroe": 0,
+        "goldnum": 0,
+        "maxscroe": 0,
+        "otherid": "",
+        "silvernum": 0
+    }],
+    "goldnum": 0,
+    "highscore": 0,
+    "itemlist": [{
+        "itemallnum": 10,
+        "itemdes": "10gem",
+        "itemid": "emapgame.duckputone.10",
+        "itemname": "10gem",
+        "itemnum": 10,
+        "itemprice": "0.99",
+        "type": 1
+    }, {
+        "itemallnum": 25,
+        "itemdes": "25gem",
+        "itemid": "emapgame.duckputone.25",
+        "itemname": "25gem",
+        "itemnum": 25,
+        "itemprice": "1.99",
+        "type": 2
+    }, {
+        "itemallnum": 65,
+        "itemdes": "65gem",
+        "itemid": "emapgame.duckputone.65",
+        "itemname": "65gem",
+        "itemnum": 65,
+        "itemprice": "5.99",
+        "type": 3
+    }, {
+        "itemallnum": 160,
+        "itemdes": "160gem",
+        "itemid": "emapgame.duckputone.160",
+        "itemname": "160gem",
+        "itemnum": 160,
+        "itemprice": "19.99",
+        "type": 4
+    }, {
+        "itemallnum": 375,
+        "itemdes": "375gem",
+        "itemid": "emapgame.duckputone.375",
+        "itemname": "375gem",
+        "itemnum": 375,
+        "itemprice": "34.99",
+        "type": 5
+    }, {
+        "itemallnum": 730,
+        "itemdes": "730gem",
+        "itemid": "emapgame.duckputone.730",
+        "itemname": "730gem",
+        "itemnum": 730,
+        "itemprice": "59.99",
+        "type": 6
+    }],
+    "lv": 1,
+    "missionlist": [{
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Once play get 600000",
+        "num": 600000,
+        "type": 500,
+        "week": 1
+    }, {
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Remove 500 ducks",
+        "num": 500,
+        "type": 200,
+        "week": 2
+    }, {
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Using Hyper duck 10 times",
+        "num": 10,
+        "type": 501,
+        "week": 3
+    }, {
+        "award_num": 10,
+        "award_type": 300,
+        "description_text": "Spin 5 times",
+        "num": 5,
+        "type": 600,
+        "week": 4
+    }, {
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Play 20 times",
+        "num": 20,
+        "type": 100,
+        "week": 5
+    }, {
+        "award_num": 10,
+        "award_type": 300,
+        "description_text": "Remove 500 green ducks",
+        "num": 500,
+        "type": 201,
+        "week": 7
+    }, {
+        "award_num": 50,
+        "award_type": 300,
+        "description_text": "Complete weekmission",
+        "num": 1,
+        "type": 900,
+        "week": 8
+    }, {
+        "award_num": 2,
+        "award_type": 208,
+        "description_text": "Get 6000000 points todays",
+        "num": 6000000,
+        "type": 400,
+        "week": 6
+    }],
+    "notifylist": [],
+    "num": 0,
+    "playlist": [],
+    "score": 0,
+    "sex": 1,
+    "showlist": [{
+        "game": "Got a new record %d!!!",
+        "mark": "",
+        "type": 2,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Congratulate me on a new record by winning %d points in the game Duck Putone! Don&-&t ask me why I become so smart all of a sudden. There is no way to dodge intellgence and wisdom!"
+    }, {
+        "game": "I mercilessly beat %s",
+        "mark": "",
+        "type": 4,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "I mercilessly beat %s in Duck putone! Don&-&t ever blame me if your status is not guaranteed"
+    }, {
+        "game": "Hey! I have been up to %d level!",
+        "mark": "",
+        "type": 3,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "It&-&s amazing that I have risen to %d level! It is still unbelievable that I have played the game,got raised to another level,and earned enviable scores. Now I dare to challenge you to play Duck Putone!"
+    }, {
+        "game": "Go Duck Putone,it is fun!",
+        "mark": "",
+        "type": 1,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "I am playing duck Putone right now. It is simple ,adorable,and easy to kill time! Do come & play. I am sure you will like it"
+    }, {
+        "game": "Go Duck Putone,it is fun!",
+        "mark": "",
+        "type": 5,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Go Duck Putone to play with your FaceBook friend!"
+    }, {
+        "game": "Loaned you a star,Please check it out!",
+        "mark": "",
+        "type": 6,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Star Gift: I ahve presented you with a star as a gift in Duck Putone. Go and take it!"
+    }, {
+        "game": "Send me some stars please!",
+        "mark": "",
+        "type": 7,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Start Request: I don&-&t have enough star in Duck Putone. Please be kind to drop me some!"
+    }],
+    "silvernum": 0,
+    "starttime": 0,
+    "uplist": [{
+        "levupex": 300,
+        "lv": 1,
+        "percent": 0,
+        "rule": 300,
+        "sliver": 1,
+        "type": 1
+    }, {
+        "levupex": 600,
+        "lv": 2,
+        "percent": 1,
+        "rule": 300,
+        "sliver": 1,
+        "type": 2
+    }, {
+        "levupex": 600,
+        "lv": 3,
+        "percent": 2,
+        "rule": 300,
+        "sliver": 1,
+        "type": 2
+    }, {
+        "levupex": 900,
+        "lv": 4,
+        "percent": 2,
+        "rule": 300,
+        "sliver": 1,
+        "type": 3
+    }, {
+        "levupex": 900,
+        "lv": 5,
+        "percent": 3,
+        "rule": 300,
+        "sliver": 1,
+        "type": 3
+    }, {
+        "levupex": 900,
+        "lv": 6,
+        "percent": 3,
+        "rule": 300,
+        "sliver": 1,
+        "type": 3
+    }, {
+        "levupex": 1200,
+        "lv": 7,
+        "percent": 4,
+        "rule": 300,
+        "sliver": 10,
+        "type": 4
+    }, {
+        "levupex": 1200,
+        "lv": 8,
+        "percent": 4,
+        "rule": 300,
+        "sliver": 1,
+        "type": 4
+    }, {
+        "levupex": 1200,
+        "lv": 9,
+        "percent": 5,
+        "rule": 300,
+        "sliver": 1,
+        "type": 4
+    }, {
+        "levupex": 1800,
+        "lv": 10,
+        "percent": 5,
+        "rule": 300,
+        "sliver": 1,
+        "type": 6
+    }, {
+        "levupex": 1800,
+        "lv": 11,
+        "percent": 6,
+        "rule": 300,
+        "sliver": 1,
+        "type": 6
+    }, {
+        "levupex": 1800,
+        "lv": 12,
+        "percent": 6,
+        "rule": 300,
+        "sliver": 1,
+        "type": 6
+    }, {
+        "levupex": 2400,
+        "lv": 13,
+        "percent": 7,
+        "rule": 300,
+        "sliver": 1,
+        "type": 8
+    }, {
+        "levupex": 2400,
+        "lv": 14,
+        "percent": 7,
+        "rule": 300,
+        "sliver": 1,
+        "type": 8
+    }, {
+        "levupex": 2400,
+        "lv": 15,
+        "percent": 8,
+        "rule": 300,
+        "sliver": 10,
+        "type": 8
+    }, {
+        "levupex": 3000,
+        "lv": 16,
+        "percent": 8,
+        "rule": 300,
+        "sliver": 1,
+        "type": 10
+    }, {
+        "levupex": 3000,
+        "lv": 17,
+        "percent": 9,
+        "rule": 300,
+        "sliver": 1,
+        "type": 10
+    }, {
+        "levupex": 3000,
+        "lv": 18,
+        "percent": 9,
+        "rule": 300,
+        "sliver": 1,
+        "type": 10
+    }, {
+        "levupex": 3900,
+        "lv": 19,
+        "percent": 10,
+        "rule": 300,
+        "sliver": 1,
+        "type": 13
+    }, {
+        "levupex": 3900,
+        "lv": 20,
+        "percent": 10,
+        "rule": 300,
+        "sliver": 1,
+        "type": 13
+    }, {
+        "levupex": 3900,
+        "lv": 21,
+        "percent": 11,
+        "rule": 300,
+        "sliver": 1,
+        "type": 13
+    }, {
+        "levupex": 4800,
+        "lv": 22,
+        "percent": 11,
+        "rule": 300,
+        "sliver": 1,
+        "type": 16
+    }, {
+        "levupex": 4800,
+        "lv": 23,
+        "percent": 12,
+        "rule": 300,
+        "sliver": 1,
+        "type": 16
+    }, {
+        "levupex": 4800,
+        "lv": 24,
+        "percent": 12,
+        "rule": 300,
+        "sliver": 1,
+        "type": 16
+    }, {
+        "levupex": 5700,
+        "lv": 25,
+        "percent": 13,
+        "rule": 300,
+        "sliver": 10,
+        "type": 19
+    }, {
+        "levupex": 5700,
+        "lv": 26,
+        "percent": 13,
+        "rule": 300,
+        "sliver": 0,
+        "type": 19
+    }, {
+        "levupex": 5700,
+        "lv": 27,
+        "percent": 14,
+        "rule": 300,
+        "sliver": 0,
+        "type": 19
+    }, {
+        "levupex": 6900,
+        "lv": 28,
+        "percent": 14,
+        "rule": 300,
+        "sliver": 0,
+        "type": 23
+    }, {
+        "levupex": 6900,
+        "lv": 29,
+        "percent": 15,
+        "rule": 300,
+        "sliver": 0,
+        "type": 23
+    }, {
+        "levupex": 6900,
+        "lv": 30,
+        "percent": 15,
+        "rule": 300,
+        "sliver": 0,
+        "type": 23
+    }, {
+        "levupex": 8100,
+        "lv": 31,
+        "percent": 16,
+        "rule": 300,
+        "sliver": 0,
+        "type": 27
+    }, {
+        "levupex": 8100,
+        "lv": 32,
+        "percent": 16,
+        "rule": 300,
+        "sliver": 0,
+        "type": 27
+    }, {
+        "levupex": 8100,
+        "lv": 33,
+        "percent": 17,
+        "rule": 300,
+        "sliver": 0,
+        "type": 27
+    }, {
+        "levupex": 9300,
+        "lv": 34,
+        "percent": 17,
+        "rule": 300,
+        "sliver": 0,
+        "type": 31
+    }, {
+        "levupex": 9300,
+        "lv": 35,
+        "percent": 18,
+        "rule": 300,
+        "sliver": 0,
+        "type": 31
+    }, {
+        "levupex": 9300,
+        "lv": 36,
+        "percent": 18,
+        "rule": 300,
+        "sliver": 0,
+        "type": 31
+    }, {
+        "levupex": 10800,
+        "lv": 37,
+        "percent": 19,
+        "rule": 300,
+        "sliver": 0,
+        "type": 36
+    }, {
+        "levupex": 10800,
+        "lv": 38,
+        "percent": 19,
+        "rule": 300,
+        "sliver": 0,
+        "type": 36
+    }, {
+        "levupex": 10800,
+        "lv": 39,
+        "percent": 20,
+        "rule": 300,
+        "sliver": 0,
+        "type": 36
+    }, {
+        "levupex": 12300,
+        "lv": 40,
+        "percent": 20,
+        "rule": 300,
+        "sliver": 0,
+        "type": 41
+    }, {
+        "levupex": 12300,
+        "lv": 41,
+        "percent": 21,
+        "rule": 300,
+        "sliver": 0,
+        "type": 41
+    }, {
+        "levupex": 12300,
+        "lv": 42,
+        "percent": 21,
+        "rule": 300,
+        "sliver": 0,
+        "type": 41
+    }, {
+        "levupex": 13800,
+        "lv": 43,
+        "percent": 22,
+        "rule": 300,
+        "sliver": 0,
+        "type": 46
+    }, {
+        "levupex": 13800,
+        "lv": 44,
+        "percent": 22,
+        "rule": 300,
+        "sliver": 0,
+        "type": 46
+    }, {
+        "levupex": 13800,
+        "lv": 45,
+        "percent": 23,
+        "rule": 300,
+        "sliver": 0,
+        "type": 46
+    }, {
+        "levupex": 15600,
+        "lv": 46,
+        "percent": 23,
+        "rule": 300,
+        "sliver": 0,
+        "type": 52
+    }, {
+        "levupex": 15600,
+        "lv": 47,
+        "percent": 24,
+        "rule": 300,
+        "sliver": 0,
+        "type": 52
+    }, {
+        "levupex": 15600,
+        "lv": 48,
+        "percent": 24,
+        "rule": 300,
+        "sliver": 0,
+        "type": 52
+    }, {
+        "levupex": 17400,
+        "lv": 49,
+        "percent": 25,
+        "rule": 300,
+        "sliver": 0,
+        "type": 58
+    }, {
+        "levupex": 17400,
+        "lv": 50,
+        "percent": 25,
+        "rule": 300,
+        "sliver": 0,
+        "type": 58
+    }, {
+        "levupex": 17400,
+        "lv": 51,
+        "percent": 26,
+        "rule": 300,
+        "sliver": 0,
+        "type": 58
+    }, {
+        "levupex": 19200,
+        "lv": 52,
+        "percent": 26,
+        "rule": 300,
+        "sliver": 0,
+        "type": 64
+    }, {
+        "levupex": 19200,
+        "lv": 53,
+        "percent": 27,
+        "rule": 300,
+        "sliver": 0,
+        "type": 64
+    }, {
+        "levupex": 19200,
+        "lv": 54,
+        "percent": 27,
+        "rule": 300,
+        "sliver": 0,
+        "type": 64
+    }, {
+        "levupex": 21300,
+        "lv": 55,
+        "percent": 28,
+        "rule": 300,
+        "sliver": 0,
+        "type": 71
+    }, {
+        "levupex": 21300,
+        "lv": 56,
+        "percent": 28,
+        "rule": 300,
+        "sliver": 0,
+        "type": 71
+    }, {
+        "levupex": 21300,
+        "lv": 57,
+        "percent": 29,
+        "rule": 300,
+        "sliver": 0,
+        "type": 71
+    }, {
+        "levupex": 23400,
+        "lv": 58,
+        "percent": 29,
+        "rule": 300,
+        "sliver": 0,
+        "type": 78
+    }, {
+        "levupex": 23400,
+        "lv": 59,
+        "percent": 30,
+        "rule": 300,
+        "sliver": 0,
+        "type": 78
+    }, {
+        "levupex": 23400,
+        "lv": 60,
+        "percent": 30,
+        "rule": 300,
+        "sliver": 0,
+        "type": 78
+    }, {
+        "levupex": 25500,
+        "lv": 61,
+        "percent": 31,
+        "rule": 300,
+        "sliver": 0,
+        "type": 85
+    }, {
+        "levupex": 25500,
+        "lv": 62,
+        "percent": 31,
+        "rule": 300,
+        "sliver": 0,
+        "type": 85
+    }, {
+        "levupex": 25500,
+        "lv": 63,
+        "percent": 32,
+        "rule": 300,
+        "sliver": 0,
+        "type": 85
+    }, {
+        "levupex": 27900,
+        "lv": 64,
+        "percent": 32,
+        "rule": 300,
+        "sliver": 0,
+        "type": 93
+    }, {
+        "levupex": 27900,
+        "lv": 65,
+        "percent": 33,
+        "rule": 300,
+        "sliver": 0,
+        "type": 93
+    }, {
+        "levupex": 27900,
+        "lv": 66,
+        "percent": 33,
+        "rule": 300,
+        "sliver": 0,
+        "type": 93
+    }, {
+        "levupex": 30300,
+        "lv": 67,
+        "percent": 34,
+        "rule": 300,
+        "sliver": 0,
+        "type": 101
+    }, {
+        "levupex": 30300,
+        "lv": 68,
+        "percent": 34,
+        "rule": 300,
+        "sliver": 0,
+        "type": 101
+    }, {
+        "levupex": 30300,
+        "lv": 69,
+        "percent": 35,
+        "rule": 300,
+        "sliver": 0,
+        "type": 101
+    }, {
+        "levupex": 32700,
+        "lv": 70,
+        "percent": 35,
+        "rule": 300,
+        "sliver": 0,
+        "type": 109
+    }, {
+        "levupex": 32700,
+        "lv": 71,
+        "percent": 36,
+        "rule": 300,
+        "sliver": 0,
+        "type": 109
+    }, {
+        "levupex": 32700,
+        "lv": 72,
+        "percent": 36,
+        "rule": 300,
+        "sliver": 0,
+        "type": 109
+    }, {
+        "levupex": 35400,
+        "lv": 73,
+        "percent": 37,
+        "rule": 300,
+        "sliver": 0,
+        "type": 118
+    }, {
+        "levupex": 35400,
+        "lv": 74,
+        "percent": 37,
+        "rule": 300,
+        "sliver": 0,
+        "type": 118
+    }, {
+        "levupex": 35400,
+        "lv": 75,
+        "percent": 38,
+        "rule": 300,
+        "sliver": 0,
+        "type": 118
+    }, {
+        "levupex": 38100,
+        "lv": 76,
+        "percent": 38,
+        "rule": 300,
+        "sliver": 0,
+        "type": 127
+    }, {
+        "levupex": 38100,
+        "lv": 77,
+        "percent": 39,
+        "rule": 300,
+        "sliver": 0,
+        "type": 127
+    }, {
+        "levupex": 38100,
+        "lv": 78,
+        "percent": 39,
+        "rule": 300,
+        "sliver": 0,
+        "type": 127
+    }, {
+        "levupex": 40800,
+        "lv": 79,
+        "percent": 40,
+        "rule": 300,
+        "sliver": 0,
+        "type": 136
+    }, {
+        "levupex": 40800,
+        "lv": 80,
+        "percent": 40,
+        "rule": 300,
+        "sliver": 0,
+        "type": 136
+    }, {
+        "levupex": 40800,
+        "lv": 81,
+        "percent": 41,
+        "rule": 300,
+        "sliver": 0,
+        "type": 136
+    }, {
+        "levupex": 43800,
+        "lv": 82,
+        "percent": 41,
+        "rule": 300,
+        "sliver": 0,
+        "type": 146
+    }, {
+        "levupex": 43800,
+        "lv": 83,
+        "percent": 42,
+        "rule": 300,
+        "sliver": 0,
+        "type": 146
+    }, {
+        "levupex": 43800,
+        "lv": 84,
+        "percent": 42,
+        "rule": 300,
+        "sliver": 0,
+        "type": 146
+    }, {
+        "levupex": 46800,
+        "lv": 85,
+        "percent": 43,
+        "rule": 300,
+        "sliver": 0,
+        "type": 156
+    }, {
+        "levupex": 46800,
+        "lv": 86,
+        "percent": 43,
+        "rule": 300,
+        "sliver": 0,
+        "type": 156
+    }, {
+        "levupex": 46800,
+        "lv": 87,
+        "percent": 44,
+        "rule": 300,
+        "sliver": 0,
+        "type": 156
+    }, {
+        "levupex": 49800,
+        "lv": 88,
+        "percent": 44,
+        "rule": 300,
+        "sliver": 0,
+        "type": 166
+    }, {
+        "levupex": 49800,
+        "lv": 89,
+        "percent": 45,
+        "rule": 300,
+        "sliver": 0,
+        "type": 166
+    }, {
+        "levupex": 49800,
+        "lv": 90,
+        "percent": 45,
+        "rule": 300,
+        "sliver": 0,
+        "type": 166
+    }, {
+        "levupex": 53100,
+        "lv": 91,
+        "percent": 46,
+        "rule": 300,
+        "sliver": 0,
+        "type": 177
+    }, {
+        "levupex": 53100,
+        "lv": 92,
+        "percent": 46,
+        "rule": 300,
+        "sliver": 0,
+        "type": 177
+    }, {
+        "levupex": 53100,
+        "lv": 93,
+        "percent": 47,
+        "rule": 300,
+        "sliver": 0,
+        "type": 177
+    }, {
+        "levupex": 56400,
+        "lv": 94,
+        "percent": 47,
+        "rule": 300,
+        "sliver": 0,
+        "type": 188
+    }, {
+        "levupex": 56400,
+        "lv": 95,
+        "percent": 48,
+        "rule": 300,
+        "sliver": 0,
+        "type": 188
+    }, {
+        "levupex": 56400,
+        "lv": 96,
+        "percent": 48,
+        "rule": 300,
+        "sliver": 0,
+        "type": 188
+    }, {
+        "levupex": 59700,
+        "lv": 97,
+        "percent": 49,
+        "rule": 300,
+        "sliver": 0,
+        "type": 199
+    }, {
+        "levupex": 59700,
+        "lv": 98,
+        "percent": 49,
+        "rule": 300,
+        "sliver": 0,
+        "type": 199
+    }, {
+        "levupex": 59700,
+        "lv": 99,
+        "percent": 50,
+        "rule": 300,
+        "sliver": 0,
+        "type": 199
+    }, {
+        "levupex": 63300,
+        "lv": 100,
+        "percent": 50,
+        "rule": 300,
+        "sliver": 0,
+        "type": 211
+    }],
+    "userid": 9146,
+    "week": 1
+}
+{
+    "Age": 0,
+    "Email": "",
+    "OtherId": "",
+    "OtherName": "Player-9146",
+    "UserName": "Player-9146",
+    "action": 5,
+    "awardlist": [{
+        "num": 1,
+        "sliver": 1
+    }, {
+        "num": 2,
+        "sliver": 2
+    }, {
+        "num": 3,
+        "sliver": 3
+    }, {
+        "num": 4,
+        "sliver": 4
+    }, {
+        "num": 5,
+        "sliver": 5
+    }, {
+        "num": 6,
+        "sliver": 6
+    }, {
+        "num": 7,
+        "sliver": 7
+    }, {
+        "num": 8,
+        "sliver": 8
+    }, {
+        "num": 9,
+        "sliver": 9
+    }, {
+        "num": 10,
+        "sliver": 10
+    }],
+    "bronzenum": 0,
+    "commresponse": {
+        "appver": "2.0",
+        "code": "02",
+        "msg": "Success",
+        "retcode": 1,
+        "systime": 1384402858
+    },
+    "curex": 0,
+    "datetime": 1384761420,
+    "day": 1,
+    "diamond": 0,
+    "friendlist": [{
+        "bronzenum": 0,
+        "friendid": 9146,
+        "friendname": "Player-9146",
+        "friendscroe": 0,
+        "goldnum": 0,
+        "maxscroe": 0,
+        "otherid": "",
+        "silvernum": 0
+    }],
+    "goldnum": 0,
+    "highscore": 0,
+    "itemlist": [{
+        "itemallnum": 10,
+        "itemdes": "10gem",
+        "itemid": "emapgame.duckputone.10",
+        "itemname": "10gem",
+        "itemnum": 10,
+        "itemprice": "0.99",
+        "type": 1
+    }, {
+        "itemallnum": 25,
+        "itemdes": "25gem",
+        "itemid": "emapgame.duckputone.25",
+        "itemname": "25gem",
+        "itemnum": 25,
+        "itemprice": "1.99",
+        "type": 2
+    }, {
+        "itemallnum": 65,
+        "itemdes": "65gem",
+        "itemid": "emapgame.duckputone.65",
+        "itemname": "65gem",
+        "itemnum": 65,
+        "itemprice": "5.99",
+        "type": 3
+    }, {
+        "itemallnum": 160,
+        "itemdes": "160gem",
+        "itemid": "emapgame.duckputone.160",
+        "itemname": "160gem",
+        "itemnum": 160,
+        "itemprice": "19.99",
+        "type": 4
+    }, {
+        "itemallnum": 375,
+        "itemdes": "375gem",
+        "itemid": "emapgame.duckputone.375",
+        "itemname": "375gem",
+        "itemnum": 375,
+        "itemprice": "34.99",
+        "type": 5
+    }, {
+        "itemallnum": 730,
+        "itemdes": "730gem",
+        "itemid": "emapgame.duckputone.730",
+        "itemname": "730gem",
+        "itemnum": 730,
+        "itemprice": "59.99",
+        "type": 6
+    }],
+    "lv": 1,
+    "missionlist": [{
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Once play get 600000",
+        "num": 600000,
+        "type": 500,
+        "week": 1
+    }, {
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Remove 500 ducks",
+        "num": 500,
+        "type": 200,
+        "week": 2
+    }, {
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Using Hyper duck 10 times",
+        "num": 10,
+        "type": 501,
+        "week": 3
+    }, {
+        "award_num": 10,
+        "award_type": 300,
+        "description_text": "Spin 5 times",
+        "num": 5,
+        "type": 600,
+        "week": 4
+    }, {
+        "award_num": 5,
+        "award_type": 300,
+        "description_text": "Play 20 times",
+        "num": 20,
+        "type": 100,
+        "week": 5
+    }, {
+        "award_num": 10,
+        "award_type": 300,
+        "description_text": "Remove 500 green ducks",
+        "num": 500,
+        "type": 201,
+        "week": 7
+    }, {
+        "award_num": 50,
+        "award_type": 300,
+        "description_text": "Complete weekmission",
+        "num": 1,
+        "type": 900,
+        "week": 8
+    }, {
+        "award_num": 2,
+        "award_type": 208,
+        "description_text": "Get 6000000 points todays",
+        "num": 6000000,
+        "type": 400,
+        "week": 6
+    }],
+    "notifylist": [],
+    "num": 0,
+    "playlist": [],
+    "score": 0,
+    "sex": 1,
+    "showlist": [{
+        "game": "Got a new record %d!!!",
+        "mark": "",
+        "type": 2,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Congratulate me on a new record by winning %d points in the game Duck Putone! Don&-&t ask me why I become so smart all of a sudden. There is no way to dodge intellgence and wisdom!"
+    }, {
+        "game": "I mercilessly beat %s",
+        "mark": "",
+        "type": 4,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "I mercilessly beat %s in Duck putone! Don&-&t ever blame me if your status is not guaranteed"
+    }, {
+        "game": "Hey! I have been up to %d level!",
+        "mark": "",
+        "type": 3,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "It&-&s amazing that I have risen to %d level! It is still unbelievable that I have played the game,got raised to another level,and earned enviable scores. Now I dare to challenge you to play Duck Putone!"
+    }, {
+        "game": "Go Duck Putone,it is fun!",
+        "mark": "",
+        "type": 1,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "I am playing duck Putone right now. It is simple ,adorable,and easy to kill time! Do come & play. I am sure you will like it"
+    }, {
+        "game": "Go Duck Putone,it is fun!",
+        "mark": "",
+        "type": 5,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Go Duck Putone to play with your FaceBook friend!"
+    }, {
+        "game": "Loaned you a star,Please check it out!",
+        "mark": "",
+        "type": 6,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Star Gift: I ahve presented you with a star as a gift in Duck Putone. Go and take it!"
+    }, {
+        "game": "Send me some stars please!",
+        "mark": "",
+        "type": 7,
+        "url": "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no",
+        "webo": "Start Request: I don&-&t have enough star in Duck Putone. Please be kind to drop me some!"
+    }],
+    "silvernum": 0,
+    "starttime": 0,
+    "uplist": [{
+        "levupex": 300,
+        "lv": 1,
+        "percent": 0,
+        "rule": 300,
+        "sliver": 1,
+        "type": 1
+    }, {
+        "levupex": 600,
+        "lv": 2,
+        "percent": 1,
+        "rule": 300,
+        "sliver": 1,
+        "type": 2
+    }, {
+        "levupex": 600,
+        "lv": 3,
+        "percent": 2,
+        "rule": 300,
+        "sliver": 1,
+        "type": 2
+    }, {
+        "levupex": 900,
+        "lv": 4,
+        "percent": 2,
+        "rule": 300,
+        "sliver": 1,
+        "type": 3
+    }, {
+        "levupex": 900,
+        "lv": 5,
+        "percent": 3,
+        "rule": 300,
+        "sliver": 1,
+        "type": 3
+    }, {
+        "levupex": 900,
+        "lv": 6,
+        "percent": 3,
+        "rule": 300,
+        "sliver": 1,
+        "type": 3
+    }, {
+        "levupex": 1200,
+        "lv": 7,
+        "percent": 4,
+        "rule": 300,
+        "sliver": 10,
+        "type": 4
+    }, {
+        "levupex": 1200,
+        "lv": 8,
+        "percent": 4,
+        "rule": 300,
+        "sliver": 1,
+        "type": 4
+    }, {
+        "levupex": 1200,
+        "lv": 9,
+        "percent": 5,
+        "rule": 300,
+        "sliver": 1,
+        "type": 4
+    }, {
+        "levupex": 1800,
+        "lv": 10,
+        "percent": 5,
+        "rule": 300,
+        "sliver": 1,
+        "type": 6
+    }, {
+        "levupex": 1800,
+        "lv": 11,
+        "percent": 6,
+        "rule": 300,
+        "sliver": 1,
+        "type": 6
+    }, {
+        "levupex": 1800,
+        "lv": 12,
+        "percent": 6,
+        "rule": 300,
+        "sliver": 1,
+        "type": 6
+    }, {
+        "levupex": 2400,
+        "lv": 13,
+        "percent": 7,
+        "rule": 300,
+        "sliver": 1,
+        "type": 8
+    }, {
+        "levupex": 2400,
+        "lv": 14,
+        "percent": 7,
+        "rule": 300,
+        "sliver": 1,
+        "type": 8
+    }, {
+        "levupex": 2400,
+        "lv": 15,
+        "percent": 8,
+        "rule": 300,
+        "sliver": 10,
+        "type": 8
+    }, {
+        "levupex": 3000,
+        "lv": 16,
+        "percent": 8,
+        "rule": 300,
+        "sliver": 1,
+        "type": 10
+    }, {
+        "levupex": 3000,
+        "lv": 17,
+        "percent": 9,
+        "rule": 300,
+        "sliver": 1,
+        "type": 10
+    }, {
+        "levupex": 3000,
+        "lv": 18,
+        "percent": 9,
+        "rule": 300,
+        "sliver": 1,
+        "type": 10
+    }, {
+        "levupex": 3900,
+        "lv": 19,
+        "percent": 10,
+        "rule": 300,
+        "sliver": 1,
+        "type": 13
+    }, {
+        "levupex": 3900,
+        "lv": 20,
+        "percent": 10,
+        "rule": 300,
+        "sliver": 1,
+        "type": 13
+    }, {
+        "levupex": 3900,
+        "lv": 21,
+        "percent": 11,
+        "rule": 300,
+        "sliver": 1,
+        "type": 13
+    }, {
+        "levupex": 4800,
+        "lv": 22,
+        "percent": 11,
+        "rule": 300,
+        "sliver": 1,
+        "type": 16
+    }, {
+        "levupex": 4800,
+        "lv": 23,
+        "percent": 12,
+        "rule": 300,
+        "sliver": 1,
+        "type": 16
+    }, {
+        "levupex": 4800,
+        "lv": 24,
+        "percent": 12,
+        "rule": 300,
+        "sliver": 1,
+        "type": 16
+    }, {
+        "levupex": 5700,
+        "lv": 25,
+        "percent": 13,
+        "rule": 300,
+        "sliver": 10,
+        "type": 19
+    }, {
+        "levupex": 5700,
+        "lv": 26,
+        "percent": 13,
+        "rule": 300,
+        "sliver": 0,
+        "type": 19
+    }, {
+        "levupex": 5700,
+        "lv": 27,
+        "percent": 14,
+        "rule": 300,
+        "sliver": 0,
+        "type": 19
+    }, {
+        "levupex": 6900,
+        "lv": 28,
+        "percent": 14,
+        "rule": 300,
+        "sliver": 0,
+        "type": 23
+    }, {
+        "levupex": 6900,
+        "lv": 29,
+        "percent": 15,
+        "rule": 300,
+        "sliver": 0,
+        "type": 23
+    }, {
+        "levupex": 6900,
+        "lv": 30,
+        "percent": 15,
+        "rule": 300,
+        "sliver": 0,
+        "type": 23
+    }, {
+        "levupex": 8100,
+        "lv": 31,
+        "percent": 16,
+        "rule": 300,
+        "sliver": 0,
+        "type": 27
+    }, {
+        "levupex": 8100,
+        "lv": 32,
+        "percent": 16,
+        "rule": 300,
+        "sliver": 0,
+        "type": 27
+    }, {
+        "levupex": 8100,
+        "lv": 33,
+        "percent": 17,
+        "rule": 300,
+        "sliver": 0,
+        "type": 27
+    }, {
+        "levupex": 9300,
+        "lv": 34,
+        "percent": 17,
+        "rule": 300,
+        "sliver": 0,
+        "type": 31
+    }, {
+        "levupex": 9300,
+        "lv": 35,
+        "percent": 18,
+        "rule": 300,
+        "sliver": 0,
+        "type": 31
+    }, {
+        "levupex": 9300,
+        "lv": 36,
+        "percent": 18,
+        "rule": 300,
+        "sliver": 0,
+        "type": 31
+    }, {
+        "levupex": 10800,
+        "lv": 37,
+        "percent": 19,
+        "rule": 300,
+        "sliver": 0,
+        "type": 36
+    }, {
+        "levupex": 10800,
+        "lv": 38,
+        "percent": 19,
+        "rule": 300,
+        "sliver": 0,
+        "type": 36
+    }, {
+        "levupex": 10800,
+        "lv": 39,
+        "percent": 20,
+        "rule": 300,
+        "sliver": 0,
+        "type": 36
+    }, {
+        "levupex": 12300,
+        "lv": 40,
+        "percent": 20,
+        "rule": 300,
+        "sliver": 0,
+        "type": 41
+    }, {
+        "levupex": 12300,
+        "lv": 41,
+        "percent": 21,
+        "rule": 300,
+        "sliver": 0,
+        "type": 41
+    }, {
+        "levupex": 12300,
+        "lv": 42,
+        "percent": 21,
+        "rule": 300,
+        "sliver": 0,
+        "type": 41
+    }, {
+        "levupex": 13800,
+        "lv": 43,
+        "percent": 22,
+        "rule": 300,
+        "sliver": 0,
+        "type": 46
+    }, {
+        "levupex": 13800,
+        "lv": 44,
+        "percent": 22,
+        "rule": 300,
+        "sliver": 0,
+        "type": 46
+    }, {
+        "levupex": 13800,
+        "lv": 45,
+        "percent": 23,
+        "rule": 300,
+        "sliver": 0,
+        "type": 46
+    }, {
+        "levupex": 15600,
+        "lv": 46,
+        "percent": 23,
+        "rule": 300,
+        "sliver": 0,
+        "type": 52
+    }, {
+        "levupex": 15600,
+        "lv": 47,
+        "percent": 24,
+        "rule": 300,
+        "sliver": 0,
+        "type": 52
+    }, {
+        "levupex": 15600,
+        "lv": 48,
+        "percent": 24,
+        "rule": 300,
+        "sliver": 0,
+        "type": 52
+    }, {
+        "levupex": 17400,
+        "lv": 49,
+        "percent": 25,
+        "rule": 300,
+        "sliver": 0,
+        "type": 58
+    }, {
+        "levupex": 17400,
+        "lv": 50,
+        "percent": 25,
+        "rule": 300,
+        "sliver": 0,
+        "type": 58
+    }, {
+        "levupex": 17400,
+        "lv": 51,
+        "percent": 26,
+        "rule": 300,
+        "sliver": 0,
+        "type": 58
+    }, {
+        "levupex": 19200,
+        "lv": 52,
+        "percent": 26,
+        "rule": 300,
+        "sliver": 0,
+        "type": 64
+    }, {
+        "levupex": 19200,
+        "lv": 53,
+        "percent": 27,
+        "rule": 300,
+        "sliver": 0,
+        "type": 64
+    }, {
+        "levupex": 19200,
+        "lv": 54,
+        "percent": 27,
+        "rule": 300,
+        "sliver": 0,
+        "type": 64
+    }, {
+        "levupex": 21300,
+        "lv": 55,
+        "percent": 28,
+        "rule": 300,
+        "sliver": 0,
+        "type": 71
+    }, {
+        "levupex": 21300,
+        "lv": 56,
+        "percent": 28,
+        "rule": 300,
+        "sliver": 0,
+        "type": 71
+    }, {
+        "levupex": 21300,
+        "lv": 57,
+        "percent": 29,
+        "rule": 300,
+        "sliver": 0,
+        "type": 71
+    }, {
+        "levupex": 23400,
+        "lv": 58,
+        "percent": 29,
+        "rule": 300,
+        "sliver": 0,
+        "type": 78
+    }, {
+        "levupex": 23400,
+        "lv": 59,
+        "percent": 30,
+        "rule": 300,
+        "sliver": 0,
+        "type": 78
+    }, {
+        "levupex": 23400,
+        "lv": 60,
+        "percent": 30,
+        "rule": 300,
+        "sliver": 0,
+        "type": 78
+    }, {
+        "levupex": 25500,
+        "lv": 61,
+        "percent": 31,
+        "rule": 300,
+        "sliver": 0,
+        "type": 85
+    }, {
+        "levupex": 25500,
+        "lv": 62,
+        "percent": 31,
+        "rule": 300,
+        "sliver": 0,
+        "type": 85
+    }, {
+        "levupex": 25500,
+        "lv": 63,
+        "percent": 32,
+        "rule": 300,
+        "sliver": 0,
+        "type": 85
+    }, {
+        "levupex": 27900,
+        "lv": 64,
+        "percent": 32,
+        "rule": 300,
+        "sliver": 0,
+        "type": 93
+    }, {
+        "levupex": 27900,
+        "lv": 65,
+        "percent": 33,
+        "rule": 300,
+        "sliver": 0,
+        "type": 93
+    }, {
+        "levupex": 27900,
+        "lv": 66,
+        "percent": 33,
+        "rule": 300,
+        "sliver": 0,
+        "type": 93
+    }, {
+        "levupex": 30300,
+        "lv": 67,
+        "percent": 34,
+        "rule": 300,
+        "sliver": 0,
+        "type": 101
+    }, {
+        "levupex": 30300,
+        "lv": 68,
+        "percent": 34,
+        "rule": 300,
+        "sliver": 0,
+        "type": 101
+    }, {
+        "levupex": 30300,
+        "lv": 69,
+        "percent": 35,
+        "rule": 300,
+        "sliver": 0,
+        "type": 101
+    }, {
+        "levupex": 32700,
+        "lv": 70,
+        "percent": 35,
+        "rule": 300,
+        "sliver": 0,
+        "type": 109
+    }, {
+        "levupex": 32700,
+        "lv": 71,
+        "percent": 36,
+        "rule": 300,
+        "sliver": 0,
+        "type": 109
+    }, {
+        "levupex": 32700,
+        "lv": 72,
+        "percent": 36,
+        "rule": 300,
+        "sliver": 0,
+        "type": 109
+    }, {
+        "levupex": 35400,
+        "lv": 73,
+        "percent": 37,
+        "rule": 300,
+        "sliver": 0,
+        "type": 118
+    }, {
+        "levupex": 35400,
+        "lv": 74,
+        "percent": 37,
+        "rule": 300,
+        "sliver": 0,
+        "type": 118
+    }, {
+        "levupex": 35400,
+        "lv": 75,
+        "percent": 38,
+        "rule": 300,
+        "sliver": 0,
+        "type": 118
+    }, {
+        "levupex": 38100,
+        "lv": 76,
+        "percent": 38,
+        "rule": 300,
+        "sliver": 0,
+        "type": 127
+    }, {
+        "levupex": 38100,
+        "lv": 77,
+        "percent": 39,
+        "rule": 300,
+        "sliver": 0,
+        "type": 127
+    }, {
+        "levupex": 38100,
+        "lv": 78,
+        "percent": 39,
+        "rule": 300,
+        "sliver": 0,
+        "type": 127
+    }, {
+        "levupex": 40800,
+        "lv": 79,
+        "percent": 40,
+        "rule": 300,
+        "sliver": 0,
+        "type": 136
+    }, {
+        "levupex": 40800,
+        "lv": 80,
+        "percent": 40,
+        "rule": 300,
+        "sliver": 0,
+        "type": 136
+    }, {
+        "levupex": 40800,
+        "lv": 81,
+        "percent": 41,
+        "rule": 300,
+        "sliver": 0,
+        "type": 136
+    }, {
+        "levupex": 43800,
+        "lv": 82,
+        "percent": 41,
+        "rule": 300,
+        "sliver": 0,
+        "type": 146
+    }, {
+        "levupex": 43800,
+        "lv": 83,
+        "percent": 42,
+        "rule": 300,
+        "sliver": 0,
+        "type": 146
+    }, {
+        "levupex": 43800,
+        "lv": 84,
+        "percent": 42,
+        "rule": 300,
+        "sliver": 0,
+        "type": 146
+    }, {
+        "levupex": 46800,
+        "lv": 85,
+        "percent": 43,
+        "rule": 300,
+        "sliver": 0,
+        "type": 156
+    }, {
+        "levupex": 46800,
+        "lv": 86,
+        "percent": 43,
+        "rule": 300,
+        "sliver": 0,
+        "type": 156
+    }, {
+        "levupex": 46800,
+        "lv": 87,
+        "percent": 44,
+        "rule": 300,
+        "sliver": 0,
+        "type": 156
+    }, {
+        "levupex": 49800,
+        "lv": 88,
+        "percent": 44,
+        "rule": 300,
+        "sliver": 0,
+        "type": 166
+    }, {
+        "levupex": 49800,
+        "lv": 89,
+        "percent": 45,
+        "rule": 300,
+        "sliver": 0,
+        "type": 166
+    }, {
+        "levupex": 49800,
+        "lv": 90,
+        "percent": 45,
+        "rule": 300,
+        "sliver": 0,
+        "type": 166
+    }, {
+        "levupex": 53100,
+        "lv": 91,
+        "percent": 46,
+        "rule": 300,
+        "sliver": 0,
+        "type": 177
+    }, {
+        "levupex": 53100,
+        "lv": 92,
+        "percent": 46,
+        "rule": 300,
+        "sliver": 0,
+        "type": 177
+    }, {
+        "levupex": 53100,
+        "lv": 93,
+        "percent": 47,
+        "rule": 300,
+        "sliver": 0,
+        "type": 177
+    }, {
+        "levupex": 56400,
+        "lv": 94,
+        "percent": 47,
+        "rule": 300,
+        "sliver": 0,
+        "type": 188
+    }, {
+        "levupex": 56400,
+        "lv": 95,
+        "percent": 48,
+        "rule": 300,
+        "sliver": 0,
+        "type": 188
+    }, {
+        "levupex": 56400,
+        "lv": 96,
+        "percent": 48,
+        "rule": 300,
+        "sliver": 0,
+        "type": 188
+    }, {
+        "levupex": 59700,
+        "lv": 97,
+        "percent": 49,
+        "rule": 300,
+        "sliver": 0,
+        "type": 199
+    }, {
+        "levupex": 59700,
+        "lv": 98,
+        "percent": 49,
+        "rule": 300,
+        "sliver": 0,
+        "type": 199
+    }, {
+        "levupex": 59700,
+        "lv": 99,
+        "percent": 50,
+        "rule": 300,
+        "sliver": 0,
+        "type": 199
+    }, {
+        "levupex": 63300,
+        "lv": 100,
+        "percent": 50,
+        "rule": 300,
+        "sliver": 0,
+        "type": 211
+    }],
+    "userid": 9146,
+    "week": 1
+}
+++++++++++++++++++++++++++++++++++++++++++++++++
+2013-11-14 12:18:52.958 TSone_SNS[1412:a0b] {
+    CFBundleDevelopmentRegion = china;
+    CFBundleDisplayName = "Duck Putone";
+    CFBundleExecutable = "TSone_SNS";
+    CFBundleIconFiles =     (
+        "Icon.png",
+        "Icon@2x.png",
+        "Icon-72.png",
+        "Icon-Small-50.png",
+        "Icon-Small.png",
+        "Icon-Small@2x.png",
+        "Icon7.png",
+        "Icon7@2x.png"
+    );
+    CFBundleIdentifier = "plopducks.versalinks.com";
+    CFBundleInfoDictionaryVersion = "6.0";
+    CFBundleName = "Duck Putone";
+    CFBundlePackageType = APPL;
+    CFBundleShortVersionString = "1.1";
+    CFBundleSignature = "????";
+    CFBundleSupportedPlatforms =     (
+        iPhoneSimulator
+    );
+    CFBundleURLTypes =     (
+                {
+            CFBundleTypeRole = Editor;
+            CFBundleURLSchemes =             (
+                fb161727324018457
+            );
+        }
+    );
+    CFBundleVersion = "1.1";
+    DTPlatformName = iphonesimulator;
+    DTSDKName = "iphonesimulator7.0";
+    FacebookAppID = 161727324018457;
+    FacebookDisplayName = "Duck Putone";
+    LSApplicationCategoryType = "";
+    LSRequiresIPhoneOS = 1;
+    UIDeviceFamily =     (
+        1
+    );
+    UIPrerenderedIcon = 1;
+    UIRequiredDeviceCapabilities =     {
+        accelerometer = 1;
+        "opengles-1" = 1;
+    };
+    UIStatusBarHidden = 1;
+    UISupportedInterfaceOrientations =     (
+        UIInterfaceOrientationPortrait
+    );
+    UIViewControllerBasedStatusBarAppearance = 0;
+}
+Cocos2d: 0
+Cocos2d: {"code" : "01","commrequest" : {"appver" : "1.0","snnum" : "1111111","sysver" : "1.1","version" : "1.1"}}\320\252$\320\265$\320
+Cocos2d: recv:{"commresponse" : {"appver" : "1.0","code" : "01","msg" : "Success","retcode" : 1,"systime" : 1384402734},"lang" : "en","otherid" : "0","othername" : "Player-9146","sex" : 1,"userid" : 9146,"username" : "Player-9146"}
+Cocos2d: 1
+Cocos2d: {"code" : "02","commrequest" : {"appver" : "1.0","snnum" : "1111111","sysver" : "1.1","version" : "1.1"},"email" : "","lang" : "en","list" : [],"otherid" : "0","othername" : "Player-9146","sex" : 1,"source" : "2","userid" : 9146,"username" : "Player-9146"}
+Cocos2d: recv:{"Age" : 0,"Email" : "","OtherId" : "","OtherName" : "Player-9146","UserName" : "Player-9146","action" : 5,"awardlist" : [{"num" : 1,"sliver" : 1},{"num" : 2,"sliver" : 2},{"num" : 3,"sliver" : 3},{"num" : 4,"sliver" : 4},{"num" : 5,"sliver" : 5},{"num" : 6,"sliver" : 6},{"num" : 7,"sliver" : 7},{"num" : 8,"sliver" : 8},{"num" : 9,"sliver" : 9},{"num" : 10,"sliver" : 10}],"bronzenum" : 0,"commresponse" : {"appver" : "2.0","code" : "02","msg" : "Success","retcode" : 1,"systime" : 1384402858},"curex" : 0,"datetime" : 1384761420,"day" : 1,"diamond" : 0,"friendlist" : [{"bronzenum" : 0,"friendid" : 9146,"friendname" : "Player-9146","friendscroe" : 0,"goldnum" : 0,"maxscroe" : 0,"otherid" : "","silvernum" : 0}],"goldnum" : 0,"highscore" : 0,"itemlist" : [{"itemallnum" : 10,"itemdes" : "10gem","itemid" : "emapgame.duckputone.10","itemname" : "10gem","itemnum" : 10,"itemprice" : "0.99","type" : 1},{"itemallnum" : 25,"itemdes" : "25gem","itemid" : "emapgame.duckputone.25","itemname" : "25gem","itemnum" : 25,"itemprice" : "1.99","type" : 2},{"itemallnum" : 65,"itemdes" : "65gem","itemid" : "emapgame.duckputone.65","itemname" : "65gem","itemnum" : 65,"itemprice" : "5.99","type" : 3},{"itemallnum" : 160,"itemdes" : "160gem","itemid" : "emapgame.duckputone.160","itemname" : "160gem","itemnum" : 160,"itemprice" : "19.99","type" : 4},{"itemallnum" : 375,"itemdes" : "375gem","itemid" : "emapgame.duckputone.375","itemname" : "375gem","itemnum" : 375,"itemprice" : "34.99","type" : 5},{"itemallnum" : 730,"itemdes" : "730gem","itemid" : "emapgame.duckputone.730","itemname" : "730gem","itemnum" : 730,"itemprice" : "59.99","type" : 6}],"lv" : 1,"missionlist" : [{"award_num" : 5,"award_type" : 300,"description_text" : "Once play get 600000","num" : 600000,"type" : 500,"week" : 1},{"award_num" : 5,"award_type" : 300,"description_text" : "Remove 500 ducks","num" : 500,"type" : 200,"week" : 2},{"award_num" : 5,"award_type" : 300,"description_text" : "Using Hyper duck 10 times","num" : 10,"type" : 501,"week" : 3},{"award_num" : 10,"award_type" : 300,"description_text" : "Spin 5 times","num" : 5,"type" : 600,"week" : 4},{"award_num" : 5,"award_type" : 300,"description_text" : "Play 20 times","num" : 20,"type" : 100,"week" : 5},{"award_num" : 10,"award_type" : 300,"description_text" : "Remove 500 green ducks","num" : 500,"type" : 201,"week" : 7},{"award_num" : 50,"award_type" : 300,"description_text" : "Complete weekmission","num" : 1,"type" : 900,"week" : 8},{"award_num" : 2,"award_type" : 208,"description_text" : "Get 6000000 points todays","num" : 6000000,"type" : 400,"week" : 6}],"notifylist" : [],"num" : 0,"playlist" : [],"score" : 0,"sex" : 1,"showlist" : [{"game" : "Got a new record %d!!!","mark" : "","type" : 2,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "Congratulate me on a new record by winning %d points in the game Duck Putone! Don&-&t ask me why I become so smart all of a sudden. There is no way to dodge intellgence and wisdom!"},{"game" : "I mercilessly beat %s","mark" : "","type" : 4,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "I mercilessly beat %s in Duck putone! Don&-&t ever blame me if your status is not guaranteed"},{"game" : "Hey! I have been up to %d level!","mark" : "","type" : 3,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "It&-&s amazing that I have risen to %d level! It is still unbelievable that I have played the game,got raised to another level,and earned enviable scores. Now I dare to challenge you to play Duck Putone!"},{"game" : "Go Duck Putone,it is fun!","mark" : "","type" : 1,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "I am playing duck Putone right now. It is simple ,adorable,and easy to kill time! Do come & play. I am sure you will like it"},{"game" : "Go Duck Putone,it is fun!","mark" : "","type" : 5,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "Go Duck Putone to play with your FaceBook friend!"},{"game" : "Loaned you a star,Please check it out!","mark" : "","type" : 6,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "Star Gift: I ahve presented you with a star as a gift in Duck Putone. Go and take it!"},{"game" : "Send me some stars please!","mark" : "","type" : 7,"url" : "http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no","webo" : "Start Request: I don&-&t have enough star in Duck Putone. Please be kind to drop me some!"}],"silvernum" : 0,"starttime" : 0,"uplist" : [{"levupex" : 300,"lv" : 1,"percent" : 0,"rule" : 300,"sliver" : 1,"type" : 1},{"levupex" : 600,"lv" : 2,"percent" : 1,"rule" : 300,"sliver" : 1,"type" : 2},{"levupex" : 600,"lv" : 3,"percent" : 2,"rule" : 300,"sliver" : 1,"type" : 2},{"levupex" : 900,"lv" : 4,"percent" : 2,"rule" : 300,"sliver" : 1,"type" : 3},{"levupex" : 900,"lv" : 5,"percent" : 3,"rule" : 300,"sliver" : 1,"type" : 3},{"levupex" : 900,"lv" : 6,"percent" : 3,"rule" : 300,"sliver" : 1,"type" : 3},{"levupex" : 1200,"lv" : 7,"percent" : 4,"rule" : 300,"sliver" : 10,"type" : 4},{"levupex" : 1200,"lv" : 8,"percent" : 4,"rule" : 300,"sliver" : 1,"type" : 4},{"levupex" : 1200,"lv" : 9,"percent" : 5,"rule" : 300,"sliver" : 1,"type" : 4},{"levupex" : 1800,"lv" : 10,"percent" : 5,"rule" : 300,"sliver" : 1,"type" : 6},{"levupex" : 1800,"lv" : 11,"percent" : 6,"rule" : 300,"sliver" : 1,"type" : 6},{"levupex" : 1800,"lv" : 12,"percent" : 6,"rule" : 300,"sliver" : 1,"type" : 6},{"levupex" : 2400,"lv" : 13,"percent" : 7,"rule" : 300,"sliver" : 1,"type" : 8},{"levupex" : 2400,"lv" : 14,"percent" : 7,"rule" : 300,"sliver" : 1,"type" : 8},{"levupex" : 2400,"lv" : 15,"percent" : 8,"rule" : 300,"sliver" : 10,"type" : 8},{"levupex" : 3000,"lv" : 16,"percent" : 8,"rule" : 300,"sliver" : 1,"type" : 10},{"levupex" : 3000,"lv" : 17,"percent" : 9,"rule" : 300,"sliver" : 1,"type" : 10},{"levupex" : 3000,"lv" : 18,"percent" : 9,"rule" : 300,"sliver" : 1,"type" : 10},{"levupex" : 3900,"lv" : 19,"percent" : 10,"rule" : 300,"sliver" : 1,"type" : 13},{"levupex" : 3900,"lv" : 20,"percent" : 10,"rule" : 300,"sliver" : 1,"type" : 13},{"levupex" : 3900,"lv" : 21,"percent" : 11,"rule" : 300,"sliver" : 1,"type" : 13},{"levupex" : 4800,"lv" : 22,"percent" : 11,"rule" : 300,"sliver" : 1,"type" : 16},{"levupex" : 4800,"lv" : 23,"percent" : 12,"rule" : 300,"sliver" : 1,"type" : 16},{"levupex" : 4800,"lv" : 24,"percent" : 12,"rule" : 300,"sliver" : 1,"type" : 16},{"levupex" : 5700,"lv" : 25,"percent" : 13,"rule" : 300,"sliver" : 10,"type" : 19},{"levupex" : 5700,"lv" : 26,"percent" : 13,"rule" : 300,"sliver" : 0,"type" : 19},{"levupex" : 5700,"lv" : 27,"percent" : 14,"rule" : 300,"sliver" : 0,"type" : 19},{"levupex" : 6900,"lv" : 28,"percent" : 14,"rule" : 300,"sliver" : 0,"type" : 23},{"levupex" : 6900,"lv" : 29,"percent" : 15,"rule" : 300,"sliver" : 0,"type" : 23},{"levupex" : 6900,"lv" : 30,"percent" : 15,"rule" : 300,"sliver" : 0,"type" : 23},{"levupex" : 8100,"lv" : 31,"percent" : 16,"rule" : 300,"sliver" : 0,"type" : 27},{"levupex" : 8100,"lv" : 32,"percent" : 16,"rule" : 300,"sliver" : 0,"type" : 27},{"levupex" : 8100,"lv" : 33,"percent" : 17,"rule" : 300,"sliver" : 0,"type" : 27},{"levupex" : 9300,"lv" : 34,"percent" : 17,"rule" : 300,"sliver" : 0,"type" : 31},{"levupex" : 9300,"lv" : 35,"percent" : 18,"rule" : 300,"sliver" : 0,"type" : 31},{"levupex" : 9300,"lv" : 36,"percent" : 18,"rule" : 300,"sliver" : 0,"type" : 31},{"levupex" : 10800,"lv" : 37,"percent" : 19,"rule" : 300,"sliver" : 0,"type" : 36},{"levupex" : 10800,"lv" : 38,"percent" : 19,"rule" : 300,"sliver" : 0,"type" : 36},{"levupex" : 10800,"lv" : 39,"percent" : 20,"rule" : 300,"sliver" : 0,"type" : 36},{"levupex" : 12300,"lv" : 40,"percent" : 20,"rule" : 300,"sliver" : 0,"type" : 41},{"levupex" : 12300,"lv" : 41,"percent" : 21,"rule" : 300,"sliver" : 0,"type" : 41},{"levupex" : 12300,"lv" : 42,"percent" : 21,"rule" : 300,"sliver" : 0,"type" : 41},{"levupex" : 13800,"lv" : 43,"percent" : 22,"rule" : 300,"sliver" : 0,"type" : 46},{"levupex" : 13800,"lv" : 44,"percent" : 22,"rule" : 300,"sliver" : 0,"type" : 46},{"levupex" : 13800,"lv" : 45,"percent" : 23,"rule" : 300,"sliver" : 0,"type" : 46},{"levupex" : 15600,"lv" : 46,"percent" : 23,"rule" : 300,"sliver" : 0,"type" : 52},{"levupex" : 15600,"lv" : 47,"percent" : 24,"rule" : 300,"sliver" : 0,"type" : 52},{"levupex" : 15600,"lv" : 48,"percent" : 24,"rule" : 300,"sliver" : 0,"type" : 52},{"levupex" : 17400,"lv" : 49,"percent" : 25,"rule" : 300,"sliver" : 0,"type" : 58},{"levupex" : 17400,"lv" : 50,"percent" : 25,"rule" : 300,"sliver" : 0,"type" : 58},{"levupex" : 17400,"lv" : 51,"percent" : 26,"rule" : 300,"sliver" : 0,"type" : 58},{"levupex" : 19200,"lv" : 52,"percent" : 26,"rule" : 300,"sliver" : 0,"type" : 64},{"levupex" : 19200,"lv" : 53,"percent" : 27,"rule" : 300,"sliver" : 0,"type" : 64},{"levupex" : 19200,"lv" : 54,"percent" : 27,"rule" : 300,"sliver" : 0,"type" : 64},{"levupex" : 21300,"lv" : 55,"percent" : 28,"rule" : 300,"sliver" : 0,"type" : 71},{"levupex" : 21300,"lv" : 56,"percent" : 28,"rule" : 300,"sliver" : 0,"type" : 71},{"levupex" : 21300,"lv" : 57,"percent" : 29,"rule" : 300,"sliver" : 0,"type" : 71},{"levupex" : 23400,"lv" : 58,"percent" : 29,"rule" : 300,"sliver" : 0,"type" : 78},{"levupex" : 23400,"lv" : 59,"percent" : 30,"rule" : 300,"sliver" : 0,"type" : 78},{"levupex" : 23400,"lv" : 60,"percent" : 30,"rule" : 300,"sliver" : 0,"type" : 78},{"levupex" : 25500,"lv" : 61,"percent" : 31,"rule" : 300,"sliver" : 0,"type" : 85},{"levupex" : 25500,"lv" : 62,"percent" : 31,"rule" : 300,"sliver" : 0,"type" : 85},{"levupex" : 25500,"lv" : 63,"percent" : 32,"rule" : 300,"sliver" : 0,"type" : 85},{"levupex" : 27900,"lv" : 64,"percent" : 32,"rule" : 300,"sliver" : 0,"type" : 93},{"levupex" : 27900,"lv" : 65,"percent" : 33,"rule" : 300,"sliver" : 0,"type" : 93},{"levupex" : 27900,"lv" : 66,"percent" : 33,"rule" : 300,"sliver" : 0,"type" : 93},{"levupex" : 30300,"lv" : 67,"percent" : 34,"rule" : 300,"sliver" : 0,"type" : 101},{"levupex" : 30300,"lv" : 68,"percent" : 34,"rule" : 300,"sliver" : 0,"type" : 101},{"levupex" : 30300,"lv" : 69,"percent" : 35,"rule" : 300,"sliver" : 0,"type" : 101},{"levupex" : 32700,"lv" : 70,"percent" : 35,"rule" : 300,"sliver" : 0,"type" : 109},{"levupex" : 32700,"lv" : 71,"percent" : 36,"rule" : 300,"sliver" : 0,"type" : 109},{"levupex" : 32700,"lv" : 72,"percent" : 36,"rule" : 300,"sliver" : 0,"type" : 109},{"levupex" : 35400,"lv" : 73,"percent" : 37,"rule" : 300,"sliver" : 0,"type" : 118},{"levupex" : 35400,"lv" : 74,"percent" : 37,"rule" : 300,"sliver" : 0,"type" : 118},{"levupex" : 35400,"lv" : 75,"percent" : 38,"rule" : 300,"sliver" : 0,"type" : 118},{"levupex" : 38100,"lv" : 76,"percent" : 38,"rule" : 300,"sliver" : 0,"type" : 127},{"levupex" : 38100,"lv" : 77,"percent" : 39,"rule" : 300,"sliver" : 0,"type" : 127},{"levupex" : 38100,"lv" : 78,"percent" : 39,"rule" : 300,"sliver" : 0,"type" : 127},{"levupex" : 40800,"lv" : 79,"percent" : 40,"rule" : 300,"sliver" : 0,"type" : 136},{"levupex" : 40800,"lv" : 80,"percent" : 40,"rule" : 300,"sliver" : 0,"type" : 136},{"levupex" : 40800,"lv" : 81,"percent" : 41,"rule" : 300,"sliver" : 0,"type" : 136},{"levupex" : 43800,"lv" : 82,"percent" : 41,"rule" : 300,"sliver" : 0,"type" : 146},{"levupex" : 43800,"lv" : 83,"percent" : 42,"rule" : 300,"sliver" : 0,"type" : 146},{"levupex" : 43800,"lv" : 84,"percent" : 42,"rule" : 300,"sliver" : 0,"type" : 146},{"levupex" : 46800,"lv" : 85,"percent" : 43,"rule" : 300,"sliver" : 0,"type" : 156},{"levupex" : 46800,"lv" : 86,"percent" : 43,"rule" : 300,"sliver" : 0,"type" : 156},{"levupex" : 46800,"lv" : 87,"percent" : 44,"rule" : 300,"sliver" : 0,"type" : 156},{"levupex" : 49800,"lv" : 88,"percent" : 44,"rule" : 300,"sliver" : 0,"type" : 166},{"levupex" : 49800,"lv" : 89,"percent" : 45,"rule" : 300,"sliver" : 0,"type" : 166},{"levupex" : 49800,"lv" : 90,"percent" : 45,"rule" : 300,"sliver" : 0,"type" : 166},{"levupex" : 53100,"lv" : 91,"percent" : 46,"rule" : 300,"sliver" : 0,"type" : 177},{"levupex" : 53100,"lv" : 92,"percent" : 46,"rule" : 300,"sliver" : 0,"type" : 177},{"levupex" : 53100,"lv" : 93,"percent" : 47,"rule" : 300,"sliver" : 0,"type" : 177},{"levupex" : 56400,"lv" : 94,"percent" : 47,"rule" : 300,"sliver" : 0,"type" : 188},{"levupex" : 56400,"lv" : 95,"percent" : 48,"rule" : 300,"sliver" : 0,"type" : 188},{"levupex" : 56400,"lv" : 96,"percent" : 48,"rule" : 300,"sliver" : 0,"type" : 188},{"levupex" : 59700,"lv" : 97,"percent" : 49,"rule" : 300,"sliver" : 0,"type" : 199},{"levupex" : 59700,"lv" : 98,"percent" : 49,"rule" : 300,"sliver" : 0,"type" : 199},{"levupex" : 59700,"lv" : 99,"percent" : 50,"rule" : 300,"sliver" : 0,"type" : 199},{"levupex" : 63300,"lv" : 100,"percent" : 50,"rule" : 300,"sliver" : 0,"type" : 211}],"userid" : 9146,"week" : 1}
+Cocos2d: insert into user_exdata values('1','300','1','0','1','300')
+Cocos2d: insert into user_exdata values('2','600','2','1','1','300')
+Cocos2d: insert into user_exdata values('3','600','2','2','1','300')
+Cocos2d: insert into user_exdata values('4','900','3','2','1','300')
+Cocos2d: insert into user_exdata values('5','900','3','3','1','300')
+Cocos2d: insert into user_exdata values('6','900','3','3','1','300')
+Cocos2d: insert into user_exdata values('7','1200','4','4','10','300')
+Cocos2d: insert into user_exdata values('8','1200','4','4','1','300')
+Cocos2d: insert into user_exdata values('9','1200','4','5','1','300')
+Cocos2d: insert into user_exdata values('10','1800','6','5','1','300')
+Cocos2d: insert into user_exdata values('11','1800','6','6','1','300')
+Cocos2d: insert into user_exdata values('12','1800','6','6','1','300')
+Cocos2d: insert into user_exdata values('13','2400','8','7','1','300')
+Cocos2d: insert into user_exdata values('14','2400','8','7','1','300')
+Cocos2d: insert into user_exdata values('15','2400','8','8','10','300')
+Cocos2d: insert into user_exdata values('16','3000','10','8','1','300')
+Cocos2d: insert into user_exdata values('17','3000','10','9','1','300')
+Cocos2d: insert into user_exdata values('18','3000','10','9','1','300')
+Cocos2d: insert into user_exdata values('19','3900','13','10','1','300')
+Cocos2d: insert into user_exdata values('20','3900','13','10','1','300')
+Cocos2d: insert into user_exdata values('21','3900','13','11','1','300')
+Cocos2d: insert into user_exdata values('22','4800','16','11','1','300')
+Cocos2d: insert into user_exdata values('23','4800','16','12','1','300')
+Cocos2d: insert into user_exdata values('24','4800','16','12','1','300')
+Cocos2d: insert into user_exdata values('25','5700','19','13','10','300')
+Cocos2d: insert into user_exdata values('26','5700','19','13','0','300')
+Cocos2d: insert into user_exdata values('27','5700','19','14','0','300')
+Cocos2d: insert into user_exdata values('28','6900','23','14','0','300')
+Cocos2d: insert into user_exdata values('29','6900','23','15','0','300')
+Cocos2d: insert into user_exdata values('30','6900','23','15','0','300')
+Cocos2d: insert into user_exdata values('31','8100','27','16','0','300')
+Cocos2d: insert into user_exdata values('32','8100','27','16','0','300')
+Cocos2d: insert into user_exdata values('33','8100','27','17','0','300')
+Cocos2d: insert into user_exdata values('34','9300','31','17','0','300')
+Cocos2d: insert into user_exdata values('35','9300','31','18','0','300')
+Cocos2d: insert into user_exdata values('36','9300','31','18','0','300')
+Cocos2d: insert into user_exdata values('37','10800','36','19','0','300')
+Cocos2d: insert into user_exdata values('38','10800','36','19','0','300')
+Cocos2d: insert into user_exdata values('39','10800','36','20','0','300')
+Cocos2d: insert into user_exdata values('40','12300','41','20','0','300')
+Cocos2d: insert into user_exdata values('41','12300','41','21','0','300')
+Cocos2d: insert into user_exdata values('42','12300','41','21','0','300')
+Cocos2d: insert into user_exdata values('43','13800','46','22','0','300')
+Cocos2d: insert into user_exdata values('44','13800','46','22','0','300')
+Cocos2d: insert into user_exdata values('45','13800','46','23','0','300')
+Cocos2d: insert into user_exdata values('46','15600','52','23','0','300')
+Cocos2d: insert into user_exdata values('47','15600','52','24','0','300')
+Cocos2d: insert into user_exdata values('48','15600','52','24','0','300')
+Cocos2d: insert into user_exdata values('49','17400','58','25','0','300')
+Cocos2d: insert into user_exdata values('50','17400','58','25','0','300')
+Cocos2d: insert into user_exdata values('51','17400','58','26','0','300')
+Cocos2d: insert into user_exdata values('52','19200','64','26','0','300')
+Cocos2d: insert into user_exdata values('53','19200','64','27','0','300')
+Cocos2d: insert into user_exdata values('54','19200','64','27','0','300')
+Cocos2d: insert into user_exdata values('55','21300','71','28','0','300')
+Cocos2d: insert into user_exdata values('56','21300','71','28','0','300')
+Cocos2d: insert into user_exdata values('57','21300','71','29','0','300')
+Cocos2d: insert into user_exdata values('58','23400','78','29','0','300')
+Cocos2d: insert into user_exdata values('59','23400','78','30','0','300')
+Cocos2d: insert into user_exdata values('60','23400','78','30','0','300')
+Cocos2d: insert into user_exdata values('61','25500','85','31','0','300')
+Cocos2d: insert into user_exdata values('62','25500','85','31','0','300')
+Cocos2d: insert into user_exdata values('63','25500','85','32','0','300')
+Cocos2d: insert into user_exdata values('64','27900','93','32','0','300')
+Cocos2d: insert into user_exdata values('65','27900','93','33','0','300')
+Cocos2d: insert into user_exdata values('66','27900','93','33','0','300')
+Cocos2d: insert into user_exdata values('67','30300','101','34','0','300')
+Cocos2d: insert into user_exdata values('68','30300','101','34','0','300')
+Cocos2d: insert into user_exdata values('69','30300','101','35','0','300')
+Cocos2d: insert into user_exdata values('70','32700','109','35','0','300')
+Cocos2d: insert into user_exdata values('71','32700','109','36','0','300')
+Cocos2d: insert into user_exdata values('72','32700','109','36','0','300')
+Cocos2d: insert into user_exdata values('73','35400','118','37','0','300')
+Cocos2d: insert into user_exdata values('74','35400','118','37','0','300')
+Cocos2d: insert into user_exdata values('75','35400','118','38','0','300')
+Cocos2d: insert into user_exdata values('76','38100','127','38','0','300')
+Cocos2d: insert into user_exdata values('77','38100','127','39','0','300')
+Cocos2d: insert into user_exdata values('78','38100','127','39','0','300')
+Cocos2d: insert into user_exdata values('79','40800','136','40','0','300')
+Cocos2d: insert into user_exdata values('80','40800','136','40','0','300')
+Cocos2d: insert into user_exdata values('81','40800','136','41','0','300')
+Cocos2d: insert into user_exdata values('82','43800','146','41','0','300')
+Cocos2d: insert into user_exdata values('83','43800','146','42','0','300')
+Cocos2d: insert into user_exdata values('84','43800','146','42','0','300')
+Cocos2d: insert into user_exdata values('85','46800','156','43','0','300')
+Cocos2d: insert into user_exdata values('86','46800','156','43','0','300')
+Cocos2d: insert into user_exdata values('87','46800','156','44','0','300')
+Cocos2d: insert into user_exdata values('88','49800','166','44','0','300')
+Cocos2d: insert into user_exdata values('89','49800','166','45','0','300')
+Cocos2d: insert into user_exdata values('90','49800','166','45','0','300')
+Cocos2d: insert into user_exdata values('91','53100','177','46','0','300')
+Cocos2d: insert into user_exdata values('92','53100','177','46','0','300')
+Cocos2d: insert into user_exdata values('93','53100','177','47','0','300')
+Cocos2d: insert into user_exdata values('94','56400','188','47','0','300')
+Cocos2d: insert into user_exdata values('95','56400','188','48','0','300')
+Cocos2d: insert into user_exdata values('96','56400','188','48','0','300')
+Cocos2d: insert into user_exdata values('97','59700','199','49','0','300')
+Cocos2d: insert into user_exdata values('98','59700','199','49','0','300')
+Cocos2d: insert into user_exdata values('99','59700','199','50','0','300')
+Cocos2d: insert into user_exdata values('100','63300','211','50','0','300')
+Cocos2d: insert into share_data values('2','Got a new record %d!!!','Congratulate me on a new record by winning %d points in the game Duck Putone! Don&-&t ask me why I become so smart all of a sudden. There is no way to dodge intellgence and wisdom!','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into share_data values('4','I mercilessly beat %s','I mercilessly beat %s in Duck putone! Don&-&t ever blame me if your status is not guaranteed','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into share_data values('3','Hey! I have been up to %d level!','It&-&s amazing that I have risen to %d level! It is still unbelievable that I have played the game,got raised to another level,and earned enviable scores. Now I dare to challenge you to play Duck Putone!','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into share_data values('1','Go Duck Putone,it is fun!','I am playing duck Putone right now. It is simple ,adorable,and easy to kill time! Do come & play. I am sure you will like it','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into share_data values('5','Go Duck Putone,it is fun!','Go Duck Putone to play with your FaceBook friend!','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into share_data values('6','Loaned you a star,Please check it out!','Star Gift: I ahve presented you with a star as a gift in Duck Putone. Go and take it!','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into share_data values('7','Send me some stars please!','Start Request: I don&-&t have enough star in Duck Putone. Please be kind to drop me some!','http://lh5.googleusercontent.com/yVV8fPiFEE1fHhOTWTLUrAzpYW-JnfX9chB_gRd-OQ=s207-p-no','')
+Cocos2d: insert into daily_login values('1','1')
+Cocos2d: insert into daily_login values('2','2')
+Cocos2d: insert into daily_login values('3','3')
+Cocos2d: insert into daily_login values('4','4')
+Cocos2d: insert into daily_login values('5','5')
+Cocos2d: insert into daily_login values('6','6')
+Cocos2d: insert into daily_login values('7','7')
+Cocos2d: insert into daily_login values('8','8')
+Cocos2d: insert into daily_login values('9','9')
+Cocos2d: insert into daily_login values('10','10')
+Cocos2d: insert into buyitem_data values('1','10gem','10gem','emapgame.duckputone.10','0.99','10','10')
+Cocos2d: insert into buyitem_data values('2','25gem','25gem','emapgame.duckputone.25','1.99','25','25')
+Cocos2d: insert into buyitem_data values('3','65gem','65gem','emapgame.duckputone.65','5.99','65','65')
+Cocos2d: insert into buyitem_data values('4','160gem','160gem','emapgame.duckputone.160','19.99','160','160')
+Cocos2d: insert into buyitem_data values('5','375gem','375gem','emapgame.duckputone.375','34.99','375','375')
+Cocos2d: insert into buyitem_data values('6','730gem','730gem','emapgame.duckputone.730','59.99','730','730')
+Cocos2d: insert into get_friendlist values('9146','','Player-9146','0','0','0','0','0','0','0')
+Cocos2d: insert into map_raw values ('','','')
+Cocos2d: 2
+* <url> malformed
+* URL using bad/illegal format or missing URL
+Cocos2d: 612.000000,708.000000
+Cocos2d: 80.000000,80.000000
+Cocos2d: 612.000000,708.000000
+Cocos2d: {"code" : "06","commrequest" : {"appver" : "1.0","snnum" : "1111111","sysver" : "1.1","version" : "1.1"},"curAction" : 5,"curScore" : 0,"curSliver" : 0,"curex" : 0,"islist" : 0,"isstart" : 0,"list" : [],"lv" : 1,"maxScore" : 0,"userid" : 9146}
+Cocos2d: recv:{"commresponse" : {"appver" : "2.0","code" : "06","msg" : "Success","retcode" : 1,"systime" : 1384403381},"userid" : 9146}
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

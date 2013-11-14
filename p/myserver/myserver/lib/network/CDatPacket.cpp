@@ -15,23 +15,23 @@
 
 int timeStart=0;
 int g_sysTimer=0;
-CDatRequest::CDatRequest(void)
+CDatResponse::CDatResponse(void)
 {
     m_pData = new CMemBuffer;
     memset(&m_head, 0, sizeof(m_head));
 }
-CDatRequest::~CDatRequest(void)
+CDatResponse::~CDatResponse(void)
 {
     if(m_pData)	m_pData->ReleaseBuffer();
 }
 
 
-CDatResponse::CDatResponse(void)
+CDatRequest::CDatRequest(void)
 {
     m_commField.retcode = 4;
 }
 
-int CDatResponse::ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out)
+int CDatRequest::ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out)
 {
     unsigned int outLenghtHint = 256 * 1024;
     /* ret value */
@@ -85,7 +85,7 @@ int CDatResponse::ccInflateMemoryWithHint(unsigned char *in, unsigned int inLeng
     return err;
 }
 
-int	CDatResponse::UnMarshal(char *pData,int len, bool zip)
+int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
 {
     char *pBuf = pData;
     /////
@@ -190,37 +190,34 @@ int	CDatResponse::UnMarshal(char *pData,int len, bool zip)
     
 }
 
-int CDatResponse::getRetcode()
+int CDatRequest::getRetcode()
 {
     return m_commField.retcode;
 }
 
-CDatResponse::~CDatResponse(void)
+CDatRequest::~CDatRequest(void)
 {
     
 }
 
 #pragma mark Regist
-CDatRegistRequest::CDatRegistRequest()
+CDatRegistResponse::CDatRegistResponse()
 {
 }
 
-int CDatRegistRequest::Marshal()
+int CDatRegistResponse::Marshal()
 {
     json::Json jsonSend;
     json::Json jsonCommon;
     
-    jsonSend["code"] = "01";
+   jsonSend["code"] = "01";
     
-    jsonCommon["snnum"] = m_commField.snnum.c_str();
-    jsonCommon["sysver"] = m_commField.sysver.c_str();
-    jsonCommon["appver"] = m_commField.appver.c_str();
-    jsonCommon["version"] = m_commField.verions.c_str();
+ 
     
     json::JsonValue jv = jsonCommon;
     jsonSend["commrequest"] = jv;
     std::string strJson;
-    
+  
     jsonSend.Dump(strJson);
     m_head.key = HEAD_KEY;
     m_head.uLen = strlen(strJson.c_str()) ;
@@ -238,17 +235,14 @@ int CDatRegistRequest::Marshal()
 }
 
 
-CDatRegistResponse::CDatRegistResponse()
-{
-    
-}
-int CDatRegistResponse::UnMarshal(json::Json &jc)
+
+int CDatRegistRequest::UnMarshal(json::Json &jc)
 {
     
     if (jc.GetItemSize()!=0)
     {
         m_reqRegist.username= ((char *)jc["username"]);
-        m_reqRegist.otherid= ((char *)jc["otherid"]);
+//        m_reqRegist.otherid= ((char *)jc["otherid"]);
         m_reqRegist.othername= ((char *)jc["othername"]);
         m_reqRegist.sex= (int)jc["sex"];
         m_reqRegist.lang= (char *)jc["lang"];
@@ -260,22 +254,22 @@ int CDatRegistResponse::UnMarshal(json::Json &jc)
     }
     return 1;
 }
-ReqLogin *CDatRegistResponse::GetUserInfo()
-{
-    return &m_reqRegist;
-}
+//ReqLogin *CDatRegistResponse::GetUserInfo()
+//{
+//    return &m_reqRegist;
+//}
 
 #pragma mark Login
 
 
-CDatLoginRequest::CDatLoginRequest(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int userid)
+CDatLoginResponse::CDatLoginRequest(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int userid)
 {
     m_reqLogin=reqLogin;
     m_source=source;
     m_list=list;
     m_userId=userid;
 }
-int CDatLoginRequest::Marshal()
+int CDatLoginResponse::Marshal()
 {
     json::Json jsonSend;
     json::Json jsonCommon;

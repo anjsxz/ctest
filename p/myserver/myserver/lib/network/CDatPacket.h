@@ -180,25 +180,25 @@ typedef struct tagWeekRankData//
     int friendscore;//好友得分
 }WeekRankData;
 
-class CDatRequest
-{
-public:
-	CDatRequest(void);
-	~CDatRequest(void); 
-    virtual int Marshal() = 0;
-
-    DAT_HEAD m_head;
-    CommRequest m_commField;
-    std::string m_strcode;
-    CMemBuffer *m_pData;
-};
-
 class CDatResponse
 {
-
 public:
 	CDatResponse(void);
 	~CDatResponse(void);
+    virtual int Marshal() = 0;
+
+    DAT_HEAD m_head;
+//    CommRequest m_commField;
+//    std::string m_strcode;
+    CMemBuffer *m_pData;
+};
+
+class CDatRequest
+{
+
+public:
+	CDatRequest(void);
+	~CDatRequest(void);
     
     virtual int				 UnMarshal(char *pData,int len, bool zip);
     virtual int              getRetcode();
@@ -216,20 +216,20 @@ public:
 /////////////////////////////////////////regist  1
 
 
-class CDatRegistRequest:public CDatRequest
+class CDatRegistResponse:public CDatResponse
 {
 public:
-    CDatRegistRequest();
+    CDatRegistResponse();
     int Marshal();
 private:
 
 };
 
 
-class CDatRegistResponse:public CDatResponse 
+class CDatRegistRequest:public CDatRequest
 {
 public:
-    CDatRegistResponse();
+    CDatRegistRequest();
     int UnMarshal(json::Json &jc);
     ReqLogin *GetUserInfo();
     int m_UserID;
@@ -242,10 +242,10 @@ private:
 /////////////////////////////////////////////////login   2
 
 
-class CDatLoginRequest:public CDatRequest
+class CDatLoginResponse:public CDatResponse
 {
 public:
-    CDatLoginRequest(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int m_onid=0);
+    CDatLoginResponse(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int m_onid=0);
     int Marshal();
 private:
     ReqLogin m_reqLogin;
@@ -256,10 +256,10 @@ private:
 };
 
 
-class CDatLoginResponse:public CDatResponse
+class CDatLoginRequest:public CDatRequest
 {
 public:
-    CDatLoginResponse();
+    CDatLoginRequest();
     int UnMarshal(json::Json &jc);
     int m_userid;//用户id
     int m_datetime;//比赛截止时间
@@ -282,10 +282,10 @@ public:
 };
 #pragma mark 更新用户信息  06
 
-class CDatUpdateUserInfoRequest:public CDatRequest
+class CDatUpdateUserInfoResponse:public CDatResponse
 {
 public:
-    CDatUpdateUserInfoRequest(getUserInfo info,std::vector<int> list,int time,int isstart,int type=0);
+    CDatUpdateUserInfoResponse(getUserInfo info,std::vector<int> list,int time,int isstart,int type=0);
     int Marshal();
 private:
     getUserInfo m_Info;//更新用户信息
@@ -294,10 +294,10 @@ private:
     int m_isstart;//是否开始游戏 统计游戏次数   0:不是   1是
     int m_type;//是否需要返回list  0:不需要   1需要
 };
-class CDatUpdateUserInfoResponse:public CDatResponse
+class CDatUpdateUserInfoRequest:public CDatRequest
 {
 public:
-    CDatUpdateUserInfoResponse();
+    CDatUpdateUserInfoRequest();
     int UnMarshal(json::Json &jc);
     int GetUpdateUserInfo();
     std::vector<FriendInfo>     m_friendslist;//好友列表
@@ -306,20 +306,20 @@ private:
     int  m_Info;
 };
 #pragma mark ---------获取行动力的开始时间（11）------- 
-class CDatgetActionRequest:public CDatRequest
+class CDatgetActionResponse:public CDatResponse
 {
 public:
-    CDatgetActionRequest(int userid);
+    CDatgetActionResponse(int userid);
     int Marshal();
 private:
     int m_userid;
 };
 
 
-class CDatgetActionResponse:public CDatResponse
+class CDatgetActionRequest:public CDatRequest
 {
 public:
-    CDatgetActionResponse();
+    CDatgetActionRequest();
     int UnMarshal(json::Json &jc);
     int GetMonInfo();
 private:
@@ -328,39 +328,39 @@ private:
 };
 #pragma mark Access is already installed little account of the game   17
 
-class CDatInstalledGameRequest:public CDatRequest
+class CDatInstalledGameResponse:public CDatResponse
 {
 public:
-    CDatInstalledGameRequest(int userid, std::vector<std::string> list);
+    CDatInstalledGameResponse(int userid, std::vector<std::string> list);
     int Marshal();
 private:
     int m_userid;
     std::vector<std::string> m_list;
 };
-class CDatInstalledGameResponse:public CDatResponse
+class CDatInstalledGameRequest:public CDatRequest
 {
 public:
-    CDatInstalledGameResponse();
+    CDatInstalledGameRequest();
     int UnMarshal(json::Json &jc);
     std::vector<std::string> *GetMonInfo();
 private:
     std::vector<std::string> m_notifyinfo;
 };
 #pragma mark-----------向好友索取或者赠送行动时通知服务器形成一个message（21）-------
-class CDaGiveStrengthRequest:public CDatRequest
+class CDaGiveStrengthResponse:public CDatResponse
 {
 public:
-    CDaGiveStrengthRequest(int useId,int friendId,int type);
+    CDaGiveStrengthResponse(int useId,int friendId,int type);
     int Marshal();
 private:
     int m_useId;
     int m_friendId;
     int m_type;
 };
-class CDatGiveStrengthResponse:public CDatResponse
+class CDatGiveStrengthRequest:public CDatRequest
 {
 public:
-    CDatGiveStrengthResponse();
+    CDatGiveStrengthRequest();
     int UnMarshal(json::Json &jc);
 };
 static char Hex(const char pos);
