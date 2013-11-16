@@ -183,60 +183,58 @@ typedef struct tagWeekRankData//
 class CDatResponse
 {
 public:
-	CDatResponse(void);
-	~CDatResponse(void);
+	CDatResponse();
+	~CDatResponse();
     virtual int Marshal() = 0;
-
+    int ccDeflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out);
+    
     DAT_HEAD m_head;
     CommResponse m_commField;
 //    std::string m_strcode;
     CMemBuffer *m_pData;
+    char* m_pSend;
+    int m_pSendLen;
 };
 
 class CDatRequest
 {
 
 public:
-	CDatRequest(void);
-	~CDatRequest(void);
-    
-    virtual int				 UnMarshal(char *pData,int len, bool zip);
-    virtual int              getRetcode();
+	CDatRequest();
+	~CDatRequest();
     virtual	int				 UnMarshal(json::Json &jc) = 0;
-    int ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out);
-    
+   
     DAT_HEAD				m_head;
     CommRequest m_commField;
     
-
 };
 
 //static    std::string a2u(const char *inbuf);
 #pragma mark Regist 1
 /////////////////////////////////////////regist  1
-
+class CDatRegistRequest:public CDatRequest
+{
+public:
+    CDatRegistRequest(json::Json*pJc);
+    int UnMarshal(json::Json &jc);
+    ReqLogin *GetUserInfo();
+    int m_UserID;
+    
+private:
+    ReqLogin m_reqRegist;
+};
 
 class CDatRegistResponse:public CDatResponse
 {
 public:
-    CDatRegistResponse();
+    CDatRegistResponse(CDatRegistRequest*req);
     int Marshal();
+    
 private:
-
+    CDatRegistRequest*m_req;
 };
 
 
-class CDatRegistRequest:public CDatRequest
-{
-public:
-    CDatRegistRequest();
-    int UnMarshal(json::Json &jc);
-    ReqLogin *GetUserInfo();
-    int m_UserID;
-
-private:
-    ReqLogin m_reqRegist;  
-};
 
 #pragma mark Login  2
 /////////////////////////////////////////////////login   2
@@ -245,6 +243,7 @@ private:
 class CDatLoginResponse:public CDatResponse
 {
 public:
+//    CDatLoginRequest
     CDatLoginResponse(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int m_onid=0);
     int Marshal();
 private:

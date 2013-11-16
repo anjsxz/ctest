@@ -1,7 +1,36 @@
-regist:{"commresponse" : {"appver" : "1.0","code" : "01","msg" : "Success","retcode" : 1,"systime" : 1384335562},"lang" : "en","otherid" : "0","othername" : "Player-9145","sex" : 1,"userid" : 9145,"username" : "Player-9145"}
-
-login :{"code" : "02","commrequest" : {"appver" : "2.0","snnum" : "1111111","sysver" : "1.1","version" : "1.1"},"email" : "","lang" : "en","list" : [],"otherid" : "0","othername" : "Player-1063","sex" : 1,"source" : "2","userid" : 1063,"username" : "Player-1063"}
-
+regist: {
+    "commresponse": {
+        "appver": "1.0",
+        "code": "01",
+        "msg": "Success",
+        "retcode": 1,
+        "systime": 1384335562
+    },
+    "lang": "en",
+    "otherid": "0",
+    "othername": "Player-9145",
+    "sex": 1,
+    "userid": 9145,
+    "username": "Player-9145"
+}
+login: {
+    "code": "02",
+    "commrequest": {
+        "appver": "2.0",
+        "snnum": "1111111",
+        "sysver": "1.1",
+        "version": "1.1"
+    },
+    "email": "",
+    "lang": "en",
+    "list": [],
+    "otherid": "0",
+    "othername": "Player-1063",
+    "sex": 1,
+    "source": "2",
+    "userid": 1063,
+    "username": "Player-1063"
+}
 {
     "Age": 0,
     "Email": "",

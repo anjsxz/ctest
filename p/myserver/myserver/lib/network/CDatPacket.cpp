@@ -9,6 +9,7 @@
 #include  "CDatPacket.h"
 #include <zlib.h>
 #include "ZipUtils.h"
+
 #if CC_TEXTURE_ATLAS_USE_VAO
 #include "iconv.h"
 #else
@@ -27,185 +28,182 @@ CDatResponse::~CDatResponse(void)
 }
 
 
-CDatRequest::CDatRequest(void)
+CDatRequest::CDatRequest()
 {
 //    m_commField.retcode = 4;
 }
-
-int CDatRequest::ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out)
-{
-    unsigned int outLenghtHint = 256 * 1024;
-    /* ret value */
-    int err = Z_OK;
-    
-    int bufferSize = outLenghtHint;
-    *out = new unsigned char[bufferSize];
-    
-    z_stream d_stream; /* decompression stream */    
-    d_stream.zalloc = (alloc_func)0;
-    d_stream.zfree = (free_func)0;
-    d_stream.opaque = (voidpf)0;
-    
-    d_stream.next_in  = in;
-    d_stream.avail_in = inLength;
-    d_stream.next_out = *out;
-    d_stream.avail_out = bufferSize;
-    
-    /* window size to hold 256k */
-    if( (err = inflateInit2(&d_stream, 15 + 32)) != Z_OK )
-        return err;
-    
-    for (;;) 
-    {
-        err = inflate(&d_stream, Z_NO_FLUSH);
-        
-        if (err == Z_STREAM_END)
-        {
-            break;
-        }
-        
-        switch (err) 
-        {
-            case Z_NEED_DICT:
-                err = Z_DATA_ERROR;
-            case Z_DATA_ERROR:
-            case Z_MEM_ERROR: 
-                inflateEnd(&d_stream);
-                return err;
-        }
-        
-        // not enough memory ?
-        if (err != Z_STREAM_END) 
-        {
-            return -1;
-        }
-    }
-    
-    
-    err = inflateEnd(&d_stream);
-    return err;
-}
-
-int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
-{
-    char *pBuf = pData;
-    /////
-    memcpy(&m_head, pData, sizeof(m_head));
-    pBuf += sizeof(m_head);
-    //////
-    
-    
-    
-    char *pBuffer;
-    
-    
-    if(m_head.cZip)
-    {
-        char *pbuf2;
-        pbuf2 = (char*)malloc(m_head.uLen );
-        memset(pbuf2, 0, m_head.uLen);
-        memcpy(pbuf2, pBuf, m_head.uLen);
-        
-        for(int i=0;i<m_head.uLen;i++)
-            pbuf2[i]-=(BYTE)i;
-        
-        int length = ZipUtils::ccInflateMemory((unsigned char*)pbuf2, m_head.uLen, (unsigned char**) &pBuffer);
-        
-        free(pbuf2);
-        
-        if(length < 0)
-        {
-            return 0;
-        }
-    }
-    else
-    {
-        pBuffer = new char[m_head.uLen + 1];
-        memset(pBuffer, 0, m_head.uLen + 1);
-        memcpy(pBuffer, pBuf, m_head.uLen);
-       
-    }
-    
-    
-    printf("%s",pBuffer);
-    
-
-    ////////////////
-    json::Json *pJson = NULL;
-    json::Json jComm;
-    json::JsonValue jv;
-    if(json::Json::Parse(pJson, pBuffer) != 0)
-    {
-        if(pJson)
-            delete pJson;
-        if(pBuffer)
-            delete [] pBuffer;
-        return 0;
-    }
-    
-    
-    
-    try {
-        jv = (*pJson)["commrequest"];
-        jComm = jv;
-        m_commField.appver =(char*) jComm["appver"];
-        m_commField.snnum = (char*)jComm["snnum"];
-        m_commField.verions = (char*)jComm["version"];
-        m_commField.sysver = (char*)jComm["sysver"];
-        
-        const   char* code =   (char*)(*pJson)["code"];
-        
-//       if (strcmp(code, "01") ==0) {
+//
+//int CDatRequest::ccInflateMemoryWithHint(unsigned char *in, unsigned int inLength, unsigned char **out)
+//{
+//    unsigned int outLenghtHint = 256 * 1024;
+//    /* ret value */
+//    int err = Z_OK;
+//    
+//    int bufferSize = outLenghtHint;
+//    *out = new unsigned char[bufferSize];
+//    
+//    z_stream d_stream; /* decompression stream */    
+//    d_stream.zalloc = (alloc_func)0;
+//    d_stream.zfree = (free_func)0;
+//    d_stream.opaque = (voidpf)0;
+//    
+//    d_stream.next_in  = in;
+//    d_stream.avail_in = inLength;
+//    d_stream.next_out = *out;
+//    d_stream.avail_out = bufferSize;
+//    
+//    /* window size to hold 256k */
+//    if( (err = inflateInit2(&d_stream, 15 + 32)) != Z_OK )
+//        return err;
+//    
+//    for (;;) 
+//    {
+//        err = inflate(&d_stream, Z_NO_FLUSH);
+//        
+//        if (err == Z_STREAM_END)
+//        {
+//            break;
+//        }
+//        
+//        switch (err) 
+//        {
+//            case Z_NEED_DICT:
+//                err = Z_DATA_ERROR;
+//            case Z_DATA_ERROR:
+//            case Z_MEM_ERROR: 
+//                inflateEnd(&d_stream);
+//                return err;
+//        }
+//        
+//        // not enough memory ?
+//        if (err != Z_STREAM_END) 
+//        {
+//            return -1;
+//        }
+//    }
+//    
+//    
+//    err = inflateEnd(&d_stream);
+//    return err;
+//}
+//
+//int	CDatRequest::UnMarshal(char *pData,int len, bool zip)
+//{
+//    char *pBuf = pData;
+//    /////
+//    memcpy(&m_head, pData, sizeof(m_head));
+//    pBuf += sizeof(m_head);
+//    //////
+//
+//    char *pBuffer;
+//    if(m_head.cZip)
+//    {
+//        char *pbuf2;
+//        pbuf2 = (char*)malloc(m_head.uLen );
+//        memset(pbuf2, 0, m_head.uLen);
+//        memcpy(pbuf2, pBuf, m_head.uLen);
+//        
+//        for(int i=0;i<m_head.uLen;i++)
+//            pbuf2[i]-=(BYTE)i;
+//        
+//        int length = ZipUtils::ccInflateMemory((unsigned char*)pbuf2, m_head.uLen, (unsigned char**) &pBuffer);
+//        
+//        free(pbuf2);
+//        
+//        if(length < 0)
+//        {
+//            return 0;
+//        }
+//    }
+//    else
+//    {
+//        pBuffer = new char[m_head.uLen + 1];
+//        memset(pBuffer, 0, m_head.uLen + 1);
+//        memcpy(pBuffer, pBuf, m_head.uLen);
 //       
-//            UnMarshal(*pJson);
-//       }else if (strcmp(code, "02") ==0) {
-//           doLogin();
-//       }else if (strcmp(code, "06") ==0){
-//           doUpdateUserInfo();
-//       }else if (strcmp(code, "11") ==0){
-//           doGetAction();
-//       }else if (strcmp(code, "17") ==0){
-//           //            Access is already installed little account of the game   17
-//           doInstalledGame();
-//       }else if (strcmp(code, "21") ==0){
-//           //            向好友索取或者赠送行动时通知服务器形成一个message（21
-//           doGiveAction();
-//       }
-        
-        
-        
-    } catch (json::JsonException *e) {
-
-        printf("%s",e->what());
-        if(pJson)
-            delete pJson;
-        if(pBuffer)
-            delete [] pBuffer;
-        return 0;
-    }
-    catch(...)
-    {
-
-    }
-    delete pJson;
-	delete [] pBuffer;
-	return 1;
-    
-}
-
+//    }
+//    
+//    
+//    printf("%s",pBuffer);
+//    
+//
+//    ////////////////
+//    json::Json *pJson = NULL;
+//    json::Json jComm;
+//    json::JsonValue jv;
+//    if(json::Json::Parse(pJson, pBuffer) != 0)
+//    {
+//        if(pJson)
+//            delete pJson;
+//        if(pBuffer)
+//            delete [] pBuffer;
+//        return 0;
+//    }
+//    
+//    
+//    
+//    try {
+//        jv = (*pJson)["commrequest"];
+//        jComm = jv;
+//        m_commField.appver =(char*) jComm["appver"];
+//        m_commField.snnum = (char*)jComm["snnum"];
+//        m_commField.verions = (char*)jComm["version"];
+//        m_commField.sysver = (char*)jComm["sysver"];
+//        
+//        const   char* code =   (char*)(*pJson)["code"];
+//        
+////       if (strcmp(code, "01") ==0) {
+////       
+////            UnMarshal(*pJson);
+////       }else if (strcmp(code, "02") ==0) {
+////           doLogin();
+////       }else if (strcmp(code, "06") ==0){
+////           doUpdateUserInfo();
+////       }else if (strcmp(code, "11") ==0){
+////           doGetAction();
+////       }else if (strcmp(code, "17") ==0){
+////           //            Access is already installed little account of the game   17
+////           doInstalledGame();
+////       }else if (strcmp(code, "21") ==0){
+////           //            向好友索取或者赠送行动时通知服务器形成一个message（21
+////           doGiveAction();
+////       }
+//        
+//        
+//        
+//    } catch (json::JsonException *e) {
+//
+//        printf("%s",e->what());
+//        if(pJson)
+//            delete pJson;
+//        if(pBuffer)
+//            delete [] pBuffer;
+//        return 0;
+//    }
+//    catch(...)
+//    {
+//
+//    }
+//    delete pJson;
+//	delete [] pBuffer;
+//	return 1;
+//    
+//}
+//
 //int CDatRequest::getRetcode()
 //{
 ////    return m_commField.retcode;
 //}
 
-CDatRequest::~CDatRequest(void)
+CDatRequest::~CDatRequest()
 {
     
 }
 
 #pragma mark Regist
-CDatRegistResponse::CDatRegistResponse()
+CDatRegistResponse::CDatRegistResponse(CDatRegistRequest*req)
 {
+    m_req = req;
 }
 
 int CDatRegistResponse::Marshal()
@@ -213,12 +211,21 @@ int CDatRegistResponse::Marshal()
     json::Json jsonSend;
     json::Json jsonCommon;
     
-   jsonSend["code"] = "01";
-    
- 
+    jsonCommon["code"] = "01";
+    jsonCommon["appver"] = m_req->m_commField.appver.c_str();
+    jsonCommon["msg"] = "Success";
+    jsonCommon["retcode"] = 1;
+    jsonCommon["systime"] = (int)time(NULL);
     
     json::JsonValue jv = jsonCommon;
-    jsonSend["commrequest"] = jv;
+    jsonSend["commresponse"] = jv;
+    
+    jsonSend["lang"]="en";
+    jsonSend["otherid"]="0";
+    jsonSend["othername"]="Player-9145";
+    jsonSend["sex"]=1;
+    jsonSend["userid"]=9145;
+    jsonSend["username"]="Player-9145";
     std::string strJson;
   
     jsonSend.Dump(strJson);
@@ -231,30 +238,53 @@ int CDatRegistResponse::Marshal()
     
     pBuf += sizeof(m_head);
     memcpy(pBuf, strJson.c_str(), m_head.uLen);
-    printf("%s",pBuf);
+    printf("send:%s\n",pBuf);
 
-    return m_head.uLen;
+    char *out = NULL;
+    char *in = m_pData->GetData()+sizeof(DAT_HEAD);
+   int len = ZipUtils::ccDeflateMemory((unsigned char*)in, m_pData->GetLength()-sizeof(DAT_HEAD),(unsigned char**) &out);
+    
+    if(len<=0)
+        return -1 ;
+    
+    for(int i=0;i<len;i++)
+    {
+        out[i]+=(BYTE)i;
+    }
+    
+    len+=sizeof(DAT_HEAD);
+    m_pSendLen=len;
+    m_pSend = (char*)malloc(len);
+    memcpy(m_pSend, m_pData->GetData(), sizeof(DAT_HEAD));
+    memcpy( m_pSend+sizeof(DAT_HEAD), out, len-sizeof(DAT_HEAD));
+    
+    DAT_HEAD *pHead = (DAT_HEAD*)m_pSend;
+    pHead->uLen = len-sizeof(DAT_HEAD);
+    
+    return len;
     
 }
 
-
+CDatRegistRequest::CDatRegistRequest(json::Json *jc){
+   UnMarshal(*jc);
+}
 
 int CDatRegistRequest::UnMarshal(json::Json &jc)
 {
     
-    if (jc.GetItemSize()!=0)
-    {
-        m_reqRegist.username= ((char *)jc["username"]);
-//        m_reqRegist.otherid= ((char *)jc["otherid"]);
-        m_reqRegist.othername= ((char *)jc["othername"]);
-        m_reqRegist.sex= (int)jc["sex"];
-        m_reqRegist.lang= (char *)jc["lang"];
-        m_UserID=(int)jc["userid"];
-    }
-    else 
-    {
-        
-    }
+//    if (jc.GetItemSize()!=0)
+//    {
+//        m_reqRegist.username= ((char *)jc["username"]);
+////        m_reqRegist.otherid= ((char *)jc["otherid"]);
+//        m_reqRegist.othername= ((char *)jc["othername"]);
+//        m_reqRegist.sex= (int)jc["sex"];
+//        m_reqRegist.lang= (char *)jc["lang"];
+//        m_UserID=(int)jc["userid"];
+//    }
+//    else 
+//    {
+//        
+//    }
     return 1;
 }
 //ReqLogin *CDatRegistResponse::GetUserInfo()
@@ -263,6 +293,7 @@ int CDatRegistRequest::UnMarshal(json::Json &jc)
 //}
 
 #pragma mark Login
+//CDatLoginResponse::CDatLoginResponse
 /*
 
 CDatLoginResponse::CDatLoginRequest(ReqLogin reqLogin,std::string source,std::vector<std::string> list,int userid)

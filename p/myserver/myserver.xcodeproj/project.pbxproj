@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0D64411836721B003D6AD6 /* AJConnect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F0D643F1836721B003D6AD6 /* AJConnect.cpp */; };
 		5F740EAE182C3B30006F2A5D /* client_plugin.h.pp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740E87182C3B30006F2A5D /* client_plugin.h.pp */; };
 		5F740EAF182C3B30006F2A5D /* libmysqlclient.18.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F740EA1182C3B30006F2A5D /* libmysqlclient.18.dylib */; };
-		5F740EC3182C3F53006F2A5D /* CDatConnect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EB7182C3F53006F2A5D /* CDatConnect.cpp */; };
 		5F740EC4182C3F53006F2A5D /* CDatPacket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EB9182C3F53006F2A5D /* CDatPacket.cpp */; };
 		5F740EC5182C3F53006F2A5D /* CMemBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EBB182C3F53006F2A5D /* CMemBuffer.cpp */; };
 		5F740EC8182C3F53006F2A5D /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F740EC0182C3F53006F2A5D /* json.cpp */; };
-		5F7AF61F183519BA00B4A6ED /* MyServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF61D183519BA00B4A6ED /* MyServer.cpp */; };
-		5F7AF62218351B0100B4A6ED /* TcpServThr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62018351B0100B4A6ED /* TcpServThr.cpp */; };
-		5F7AF62518351B3E00B4A6ED /* mysocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62318351B3E00B4A6ED /* mysocket.cpp */; };
-		5F7AF62818351BCE00B4A6ED /* Mythread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62618351BCE00B4A6ED /* Mythread.cpp */; };
-		5F7AF62B18351C1B00B4A6ED /* MySync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F7AF62918351C1B00B4A6ED /* MySync.cpp */; };
 		5FCD2FE6182BC316001BA6D4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD2FE5182BC316001BA6D4 /* main.cpp */; };
 		636745CB18337024004D0327 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 636745CA18337024004D0327 /* libz.1.2.5.dylib */; };
 		636745CE1833715A004D0327 /* ZipUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 636745CD1833715A004D0327 /* ZipUtils.cpp */; };
@@ -36,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5F0D643F1836721B003D6AD6 /* AJConnect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AJConnect.cpp; sourceTree = "<group>"; };
+		5F0D64401836721B003D6AD6 /* AJConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJConnect.h; sourceTree = "<group>"; };
 		5F740E6C182C3B30006F2A5D /* big_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = big_endian.h; sourceTree = "<group>"; };
 		5F740E6D182C3B30006F2A5D /* byte_order_generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byte_order_generic.h; sourceTree = "<group>"; };
 		5F740E6E182C3B30006F2A5D /* byte_order_generic_x86.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = byte_order_generic_x86.h; sourceTree = "<group>"; };
@@ -88,8 +85,6 @@
 		5F740E9F182C3B30006F2A5D /* sslopt-vars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "sslopt-vars.h"; sourceTree = "<group>"; };
 		5F740EA0182C3B30006F2A5D /* typelib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typelib.h; sourceTree = "<group>"; };
 		5F740EA1182C3B30006F2A5D /* libmysqlclient.18.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libmysqlclient.18.dylib; sourceTree = "<group>"; };
-		5F740EB7182C3F53006F2A5D /* CDatConnect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDatConnect.cpp; sourceTree = "<group>"; };
-		5F740EB8182C3F53006F2A5D /* CDatConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDatConnect.h; sourceTree = "<group>"; };
 		5F740EB9182C3F53006F2A5D /* CDatPacket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CDatPacket.cpp; sourceTree = "<group>"; };
 		5F740EBA182C3F53006F2A5D /* CDatPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDatPacket.h; sourceTree = "<group>"; };
 		5F740EBB182C3F53006F2A5D /* CMemBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CMemBuffer.cpp; sourceTree = "<group>"; };
@@ -97,16 +92,6 @@
 		5F740EC0182C3F53006F2A5D /* json.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json.cpp; sourceTree = "<group>"; };
 		5F740EC1182C3F53006F2A5D /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
 		5F740EC2182C3F53006F2A5D /* stdafx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stdafx.h; sourceTree = "<group>"; };
-		5F7AF61D183519BA00B4A6ED /* MyServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyServer.cpp; sourceTree = "<group>"; };
-		5F7AF61E183519BA00B4A6ED /* MyServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyServer.h; sourceTree = "<group>"; };
-		5F7AF62018351B0100B4A6ED /* TcpServThr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TcpServThr.cpp; sourceTree = "<group>"; };
-		5F7AF62118351B0100B4A6ED /* TcpServThr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TcpServThr.h; sourceTree = "<group>"; };
-		5F7AF62318351B3E00B4A6ED /* mysocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mysocket.cpp; sourceTree = "<group>"; };
-		5F7AF62418351B3E00B4A6ED /* mysocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mysocket.h; sourceTree = "<group>"; };
-		5F7AF62618351BCE00B4A6ED /* Mythread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mythread.cpp; sourceTree = "<group>"; };
-		5F7AF62718351BCE00B4A6ED /* mythread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mythread.h; sourceTree = "<group>"; };
-		5F7AF62918351C1B00B4A6ED /* MySync.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MySync.cpp; sourceTree = "<group>"; };
-		5F7AF62A18351C1B00B4A6ED /* MySync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySync.h; sourceTree = "<group>"; };
 		5FCD2FE2182BC316001BA6D4 /* myserver */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = myserver; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCD2FE5182BC316001BA6D4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		636745CA18337024004D0327 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
@@ -222,18 +207,8 @@
 		5F740EA2182C3B30006F2A5D /* network */ = {
 			isa = PBXGroup;
 			children = (
-				5F7AF62918351C1B00B4A6ED /* MySync.cpp */,
-				5F7AF62A18351C1B00B4A6ED /* MySync.h */,
-				5F7AF62318351B3E00B4A6ED /* mysocket.cpp */,
-				5F7AF62418351B3E00B4A6ED /* mysocket.h */,
-				5F7AF62618351BCE00B4A6ED /* Mythread.cpp */,
-				5F7AF62718351BCE00B4A6ED /* mythread.h */,
-				5F7AF62018351B0100B4A6ED /* TcpServThr.cpp */,
-				5F7AF62118351B0100B4A6ED /* TcpServThr.h */,
 				636745CC1833715A004D0327 /* ZipUtils.h */,
 				636745CD1833715A004D0327 /* ZipUtils.cpp */,
-				5F740EB7182C3F53006F2A5D /* CDatConnect.cpp */,
-				5F740EB8182C3F53006F2A5D /* CDatConnect.h */,
 				5F740EB9182C3F53006F2A5D /* CDatPacket.cpp */,
 				5F740EBA182C3F53006F2A5D /* CDatPacket.h */,
 				5F740EBB182C3F53006F2A5D /* CMemBuffer.cpp */,
@@ -267,8 +242,8 @@
 			children = (
 				5F740E69182C3B30006F2A5D /* lib */,
 				5FCD2FE5182BC316001BA6D4 /* main.cpp */,
-				5F7AF61D183519BA00B4A6ED /* MyServer.cpp */,
-				5F7AF61E183519BA00B4A6ED /* MyServer.h */,
+				5F0D643F1836721B003D6AD6 /* AJConnect.cpp */,
+				5F0D64401836721B003D6AD6 /* AJConnect.h */,
 			);
 			path = myserver;
 			sourceTree = "<group>";
@@ -326,15 +301,10 @@
 			files = (
 				5FCD2FE6182BC316001BA6D4 /* main.cpp in Sources */,
 				5F740EC5182C3F53006F2A5D /* CMemBuffer.cpp in Sources */,
-				5F7AF61F183519BA00B4A6ED /* MyServer.cpp in Sources */,
-				5F740EC3182C3F53006F2A5D /* CDatConnect.cpp in Sources */,
-				5F7AF62218351B0100B4A6ED /* TcpServThr.cpp in Sources */,
-				5F7AF62818351BCE00B4A6ED /* Mythread.cpp in Sources */,
 				5F740EC8182C3F53006F2A5D /* json.cpp in Sources */,
-				5F7AF62518351B3E00B4A6ED /* mysocket.cpp in Sources */,
 				5F740EAE182C3B30006F2A5D /* client_plugin.h.pp in Sources */,
 				636745CE1833715A004D0327 /* ZipUtils.cpp in Sources */,
-				5F7AF62B18351C1B00B4A6ED /* MySync.cpp in Sources */,
+				5F0D64411836721B003D6AD6 /* AJConnect.cpp in Sources */,
 				5F740EC4182C3F53006F2A5D /* CDatPacket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
