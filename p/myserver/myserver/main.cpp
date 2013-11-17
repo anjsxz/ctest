@@ -97,35 +97,46 @@ AJConnect*	UnMarshal(char *pData,int len, bool zip)
         
         const   char* code =   (char*)(*pJson)["code"];
         if (strcmp(code, "01") ==0) {
-            CDatRegistRequest  *req =new CDatRegistRequest(pJson);
+            CDatRegistRequest  *req =new CDatRegistRequest(*pJson);
+            req->m_commField =m_commField;
             CDatRegistResponse *res =new CDatRegistResponse(req);
             res->Marshal();
             return new AJConnect(req,res);
             
         }else if (strcmp(code, "02") ==0) {
-            CDatRegistRequest  *req =new CDatRegistRequest(pJson);
-            CDatRegistResponse *res =new CDatRegistResponse(req);
+            CDatLoginRequest  *req =new CDatLoginRequest(*pJson);
+            req->m_commField =m_commField;
+            CDatLoginResponse *res =new CDatLoginResponse(req);
+            res->Marshal();
             return new AJConnect(req,res);
 
         }else if (strcmp(code, "06") ==0){
-            CDatRegistRequest  *req =new CDatRegistRequest(pJson);
-            CDatRegistResponse *res =new CDatRegistResponse(req);
+            CDatUpdateUserInfoRequest  *req =new CDatUpdateUserInfoRequest(*pJson);
+            req->m_commField =m_commField;
+            CDatUpdateUserInfoResponse *res =new CDatUpdateUserInfoResponse(req);
+            res->Marshal();
             return new AJConnect(req,res);
 
         }else if (strcmp(code, "11") ==0){
-            CDatRegistRequest  *req =new CDatRegistRequest(pJson);
-            CDatRegistResponse *res =new CDatRegistResponse(req);
+            CDatgetActionRequest  *req =new CDatgetActionRequest(*pJson);
+            req->m_commField =m_commField;
+            CDatgetActionResponse *res =new CDatgetActionResponse(req);
+            res->Marshal();
             return new AJConnect(req,res);
 
         }else if (strcmp(code, "17") ==0){
-            CDatRegistRequest  *req =new CDatRegistRequest(pJson);
-            CDatRegistResponse *res =new CDatRegistResponse(req);
+            CDatInstalledGameRequest  *req =new CDatInstalledGameRequest(*pJson);
+            req->m_commField =m_commField;
+            CDatInstalledGameResponse *res =new CDatInstalledGameResponse(req);
+            res->Marshal();
             return new AJConnect(req,res);
 
         }else if (strcmp(code, "21") ==0){
-//            向好友索取或者赠送行动时通知服务器形成一个message（21
-            CDatRegistRequest  *req =new CDatRegistRequest(pJson);
-            CDatRegistResponse *res =new CDatRegistResponse(req);
+//          向好友索取或者赠送行动时通知服务器形成一个message（21
+            CDatGiveStrengthRequest  *req =new CDatGiveStrengthRequest(*pJson);
+            req->m_commField =m_commField;
+            CDatGiveStrengthResponse *res =new CDatGiveStrengthResponse(req);
+            res->Marshal();
             return new AJConnect(req,res);
 
         }
@@ -164,7 +175,7 @@ void process_cli(int connectfd, sockaddr_in client)
     }
     
     
-    long byte_num;
+    int byte_num;
     DAT_HEAD head;
     
     {
@@ -238,7 +249,7 @@ void process_cli(int connectfd, sockaddr_in client)
         
         sent+=st;
     }
-    
+    printf("\nsend len:%d\n",len);
 
 	close(connectfd); /*  close connectfd */
 }
