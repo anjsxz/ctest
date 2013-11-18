@@ -9,7 +9,7 @@
 #include  "CDatPacket.h"
 #include <zlib.h>
 #include "ZipUtils.h"
-
+#include "AJDB.h"
 #if CC_TEXTURE_ATLAS_USE_VAO
 #include "iconv.h"
 #else
@@ -46,6 +46,9 @@ CDatRegistResponse::CDatRegistResponse(CDatRegistRequest*req)
 
 int CDatRegistResponse::Marshal()
 {
+    ReqLogin user;
+    int userid= AJDB::userRegister(user);
+    if (userid<0) return 0;
     json::Json jsonSend;
     json::Json jsonCommon;
     
@@ -58,37 +61,46 @@ int CDatRegistResponse::Marshal()
     json::JsonValue jv = jsonCommon;
     jsonSend["commresponse"] = jv;
     
-    jsonSend["lang"]="en";
-    jsonSend["otherid"]="0";
-    jsonSend["othername"]="Player-9145";
-    jsonSend["sex"]=1;
-    jsonSend["userid"]=9145;
-    jsonSend["username"]="Player-9145";
+    jsonSend["lang"]=user.lang.c_str();
+    jsonSend["otherid"]=user.otherid.c_str();
+    jsonSend["othername"]=user.othername.c_str();
+    jsonSend["sex"]=user.sex;
+    jsonSend["userid"]= userid;
+    jsonSend["username"]=user.username.c_str();
     std::string strJson;
   
     jsonSend.Dump(strJson);
     m_head.key = HEAD_KEY;
     m_head.uLen = strlen(strJson.c_str()) ;
-    m_head.cZip = 1;
+    m_head.cZip = 0;
     
+    char *out = NULL;
+    int len=0;
     char *pBuf = m_pData->GetBuffer(sizeof(m_head) + m_head.uLen);
     memcpy(pBuf, &m_head, sizeof(m_head));
     
     pBuf += sizeof(m_head);
     memcpy(pBuf, strJson.c_str(), m_head.uLen);
-    printf("send:%s\n",pBuf);
-
-    char *out = NULL;
-    char *in = m_pData->GetData()+sizeof(DAT_HEAD);
-   int len = ZipUtils::ccDeflateMemory((unsigned char*)in, m_pData->GetLength()-sizeof(DAT_HEAD),(unsigned char**) &out);
-    
-    if(len<=0)
-        return -1 ;
-    
-    for(int i=0;i<len;i++)
-    {
-        out[i]+=(BYTE)i;
+    if (m_head.cZip ==1) {
+        
+        char *in = m_pData->GetData()+sizeof(DAT_HEAD);
+        len = ZipUtils::ccDeflateMemory((unsigned char*)in, m_pData->GetLength()-sizeof(DAT_HEAD),(unsigned char**) &out);
+        
+        if(len<=0)
+            return -1 ;
+        
+        for(int i=0;i<len;i++)
+        {
+            out[i]+=(BYTE)i;
+        }
+    }else{
+        out = new char[m_head.uLen + 1];
+        memset(out, 0, m_head.uLen + 1);
+        memcpy(out, strJson.c_str(), m_head.uLen);
+        len=m_head.uLen+1;
     }
+    
+    
     
     len+=sizeof(DAT_HEAD);
     m_pSendLen=len;
@@ -110,6 +122,7 @@ CDatRegistRequest::CDatRegistRequest(json::Json &jc){
 int CDatRegistRequest::UnMarshal(json::Json &jc)
 {
 
+
     return 1;
 }
 //ReqLogin *CDatRegistResponse::GetUserInfo()
@@ -125,8 +138,19 @@ CDatLoginRequest::CDatLoginRequest(json::Json&jc)
 }
 int CDatLoginRequest::UnMarshal(json::Json&jc)
 {
-    
-    return 0;
+    try {
+        m_userid= (int)jc["userid"];
+    }
+    catch(json::JsonException *e)
+    {
+        printf("%s",e->what());
+        return 0;
+    }
+    catch(...)
+    {
+        
+    }
+    return 1;
 }
 CDatLoginResponse::CDatLoginResponse(CDatLoginRequest*req)
 {
@@ -134,6 +158,10 @@ CDatLoginResponse::CDatLoginResponse(CDatLoginRequest*req)
 }
 int CDatLoginResponse::Marshal()
 {
+    LoginInfo login;
+    bool b=   AJDB::userLogin(m_req->m_userid ,login);
+    if (!b) return -1;
+    
     json::Json jsonSend;
     json::Json jsonCommon;
     
@@ -147,42 +175,42 @@ int CDatLoginResponse::Marshal()
     json::JsonValue jv = jsonCommon;
     jsonSend["commresponse"] = jv;
     
-    jsonSend["userid"]=9145;//int
-    jsonSend["datetime"]=(int)time(NULL);//int
-    jsonSend["starttime"]= (int)time(NULL);//int 行动力的起始时间
+    jsonSend["userid"]=login.userinfo.userid;//int
+    jsonSend["datetime"]=login.userinfo.datetime;//int
+    jsonSend["starttime"]= login.userinfo.starttime;//int 行动力的起始时间
     //用户详细信息表
-    jsonSend["UserName"]="Player-9145";
-    jsonSend["OtherId"]="0";
-    jsonSend["OtherName"]="0";
-    jsonSend["Email"]="";
-    jsonSend["Age"]=22;//int
-    jsonSend["sex"]=1;//int
-    jsonSend["score"]=23;//int
-    jsonSend["diamond"]=22;//int
-    jsonSend["action"]=22;//int
-    jsonSend["highscore"]=233;//int
-    jsonSend["lv"]=2;//int
-    jsonSend["curex"]=2;//int
-    jsonSend["goldnum"]=22;//int
-    jsonSend["silvernum"]=22;//int
-    jsonSend["bronzenum"]=2;//int
-    jsonSend["day"]=1;//int
-    jsonSend["week"]=1;//int
-    jsonSend["num"]=2;//int
+    jsonSend["UserName"]=login.userinfo.username.c_str();
+    jsonSend["OtherId"]=login.userinfo.otherid.c_str();
+    jsonSend["OtherName"]=login.userinfo.othername.c_str();
+    jsonSend["Email"]=login.userinfo.email.c_str();
+    jsonSend["Age"]=login.userinfo.age;//int
+    jsonSend["sex"]=login.userinfo.sex;//int
+    jsonSend["score"]=login.userinfo.score;//int
+    jsonSend["diamond"]=login.userinfo.diamond;//int
+    jsonSend["action"]=login.userinfo.action;//int
+    jsonSend["highscore"]=login.userinfo.highscore;//int
+    jsonSend["lv"]=login.userinfo.lv;//int
+    jsonSend["curex"]=login.userinfo.curex;//int
+    jsonSend["goldnum"]=login.userinfo.goldnum;//int
+    jsonSend["silvernum"]=login.userinfo.silvernum;//int
+    jsonSend["bronzenum"]=login.userinfo.bronzenum;//int
+    jsonSend["day"]=login.userinfo.day;//int
+    jsonSend["week"]=login.userinfo.week;//int
+    jsonSend["num"]=login.userinfo.num;//int
     //升级数据列表
     json::JsonArray uplist;
-    m_uplist.clear();
-    Uplist t={300,1,0,300,1,1};
-    m_uplist.push_back(t);
-    for (int i=0; i<m_uplist.size(); i++)
+//    m_uplist.clear();
+//    GetlvEx t={300,1,0,300,1,1};
+//    m_uplist.push_back(t);
+    for (int i=0; i<login.uplist.size(); i++)
     {
         json::Json jsontmp;
-        jsontmp["levupex"] = m_uplist[i].levupex;
-        jsontmp["lv"] = m_uplist[i].lv;
-        jsontmp["percent"] = m_uplist[i].percent;
-        jsontmp["rule"] = m_uplist[i].rule;
-        jsontmp["sliver"] = m_uplist[i].sliver;
-        jsontmp["type"] = m_uplist[i].type;
+        jsontmp["levupex"] = login.uplist[i].levupex;
+        jsontmp["lv"] = login.uplist[i].lv;
+        jsontmp["percent"] = login.uplist[i].bonuscore;
+        jsontmp["rule"] = login.uplist[i].getEx;
+        jsontmp["sliver"] = login.uplist[i].reward;
+        jsontmp["type"] = login.uplist[i].type;
         json::JsonValue jsontmp_v = jsontmp;
         uplist.Add(jsontmp_v);
     }
@@ -190,20 +218,20 @@ int CDatLoginResponse::Marshal()
     jsonSend["uplist"] = uplist_v;
     //好友列表
     json::JsonArray friendlist;
-    m_friendlist.clear();
-    FriendInfo friendinfo_t={9145,"0","0",300,1,1,0,0,"0","0"};
-    m_friendlist.push_back(friendinfo_t);
-    for (int i=0; i<m_friendlist.size(); i++)
+//    m_friendlist.clear();
+//    FriendInfo friendinfo_t={9145,"0","0",300,1,1,0,0,"0","0"};
+//    m_friendlist.push_back(friendinfo_t);
+    for (int i=0; i<login.friendslist.size(); i++)
     {
         json::Json jsontmp;
-        jsontmp["friendid"] = m_friendlist[i].friendid;
-        jsontmp["friendname"] = m_friendlist[i].friendname.c_str();
-        jsontmp["otherid"] = m_friendlist[i].otherid.c_str();
-        jsontmp["friendscore"] = m_friendlist[i].friendscore;
-        jsontmp["maxscore"] = m_friendlist[i].maxscore;
-        jsontmp["goldnum"] = m_friendlist[i].goldnum;
-        jsontmp["silvernum"] = m_friendlist[i].silvernum;
-        jsontmp["bronzenum"] = m_friendlist[i].bronzenum;
+        jsontmp["friendid"] = login.friendslist[i].friendid;
+        jsontmp["friendname"] = login.friendslist[i].friendname.c_str();
+        jsontmp["otherid"] = login.friendslist[i].otherid.c_str();
+        jsontmp["friendscore"] = login.friendslist[i].friendscore;
+        jsontmp["maxscore"] = login.friendslist[i].maxscore;
+        jsontmp["goldnum"] = login.friendslist[i].goldnum;
+        jsontmp["silvernum"] = login.friendslist[i].silvernum;
+        jsontmp["bronzenum"] = login.friendslist[i].bronzenum;
         json::JsonValue jsontmp_v = jsontmp;
         friendlist.Add(jsontmp_v);
     }
@@ -218,18 +246,18 @@ int CDatLoginResponse::Marshal()
     //购买钻石基本表
      //周任务列表
     json::JsonArray missionlist;
-    m_missionlist.clear();
-    TaskData missionlist_t={7,200,2,"ddd",1,1,0,0};
-    m_missionlist.push_back(missionlist_t);
-    for (int i=0; i<m_missionlist.size(); i++)
+//    m_missionlist.clear();
+//    TaskData missionlist_t={7,200,2,"ddd",1,1,0,0};
+//    m_missionlist.push_back(missionlist_t);
+    for (int i=0; i<login.missionlist.size(); i++)
     {
         json::Json jsontmp;
-        jsontmp["week"] = m_missionlist[i].week;
-        jsontmp["description_text"] = m_missionlist[i].description_text.c_str();
-        jsontmp["type"] = m_missionlist[i].type;
-        jsontmp["num"] = m_missionlist[i].num;
-        jsontmp["award_num"] = m_missionlist[i].award_num;
-        jsontmp["award_type"] = m_missionlist[i].award_type;
+        jsontmp["week"] = login.missionlist[i].week;
+        jsontmp["description_text"] = login.missionlist[i].description_text.c_str();
+        jsontmp["type"] = login.missionlist[i].type;
+        jsontmp["num"] = login.missionlist[i].num;
+        jsontmp["award_num"] = login.missionlist[i].award_num;
+        jsontmp["award_type"] = login.missionlist[i].award_type;
         json::JsonValue jsontmp_v = jsontmp;
         missionlist.Add(jsontmp_v);
     }

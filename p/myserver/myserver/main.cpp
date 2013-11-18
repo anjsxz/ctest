@@ -12,6 +12,7 @@
 #include "ZipUtils.h"
 #include "CDatPacket.h"
 #include "AJConnect.h"
+#include "AJMysql.h"
 #define PORT 6001   /* Port that will be opened */
 #define BACKLOG 5   /* Number of allowed connections */
 #define MAXDATASIZE 1000

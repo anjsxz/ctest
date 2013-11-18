@@ -76,23 +76,28 @@ typedef struct tagNotifyInfo /////4
 }NotifyInfo;
 typedef struct taggetUserInfo  ////10
 {
-    std::string User;//
-    int UserId ;//玩家  id
-    std::string OtherId;////玩家facebook的id
-    std::string OtherName;//玩家facebook的名字
-    std::string Email;//玩家的邮箱地址
-    int Age;//玩家的年龄
-    int Sex;//玩家的性别
-    int curScore ;//玩家当前最高分
-    int curSliver;//玩家的钻石个数
-    int curAction;//玩家行动力的个数
+    std::string username;//
+    int userid ;//玩家  id
+    std::string otherid;////玩家facebook的id
+    std::string othername;//玩家facebook的名字
+    std::string email;//玩家的邮箱地址
+    int age;//玩家的年龄
+    int sex;//玩家的性别
+    int score ;//玩家当前最高分
+    int diamond;//玩家的钻石个数
+    int action;//玩家行动力的个数
     int curex;//玩家当前的经验
-    int maxScore ;//玩家历史最高分
+    int highscore ;//玩家历史最高分
     int lv;//玩家等级lv
     int ani;//(当前工程没有用到)
     int goldnum;//金牌数量
     int silvernum;//银牌数量
     int bronzenum;//铜牌数量
+    int starttime;
+    int datetime;
+    int day;
+    int week;
+    int num;
 }getUserInfo;
 
 typedef struct tagGetItemData     ////13
@@ -180,17 +185,38 @@ typedef struct tagWeekRankData//
     int friendscore;//好友得分
 }WeekRankData;
 
-typedef struct tagUplist{
-    int levupex;
-    int lv;
-    int  percent;
-    int rule;
-    int sliver;
-    int type;
-}Uplist;//升级列表
 typedef struct tagInstalledGame{
     std::string id;
 }InstalledGame;
+
+typedef struct tagLoginInfo{
+    int userid;
+    int datetime;
+    int starttime;
+    getUserInfo userinfo;
+    std::vector<GetlvEx>        uplist;//升级数值列表
+    std::vector<FriendInfo>     friendslist;//好友列表
+    std::vector<NotifyInfo>     notifylist;//通知列表
+    std::vector<ShareText>      showlist;//分享显示列表
+    std::vector<InstalledGame>    list;//安装游戏的列表
+    std::vector<DailyLogin>     awardlist;//奖励列表
+    std::vector<WeekRankData>   weeklist;//星期好友排名
+    std::vector<BuyItem>    itemlist;//购买基本表
+    std::vector<TaskData>       missionlist;//周任务列表
+    std::vector<ActivityData>   playlist;//活动列表
+}LoginInfo;
+//typedef struct tagUser   /////2
+//{
+//    std::string userid;
+//    std::string username;//用户名
+//    std::string otherid ;//facebook id
+//    std::string othername;//facebook name
+//    int sex ;//性别
+//    std::string lang;//语言
+//    std::string email;//邮箱
+//    std::string pic;//图片链接地址
+//    int time;
+//}User;
 //////////////////////////////////
 class CDatResponse
 {
@@ -286,7 +312,7 @@ public:
 private:
     ReqLogin m_reqLogin;
     std::string m_source;
-    std::vector<Uplist> m_uplist;
+    std::vector<GetlvEx> m_uplist;
     std::vector<FriendInfo>m_friendlist;
     std::vector<TaskData>m_missionlist;
     int m_userId;
